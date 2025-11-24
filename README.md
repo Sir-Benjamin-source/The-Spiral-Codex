@@ -1,5 +1,11 @@
 # The Spiral Codex: Living Repository of Helix-Driven Frameworks
+<div align="center">
+  <h1>🌀 The Spiral Codex – Open Source Reasoning Suite</h1>
+  <b>Zero-cost, zero-lock-in tools that bring 100 % continuity and 90 %+ bias resistance to every open model on Earth.</b><br>
+  Just click "Use this template" → run locally → own your intelligence.
+</div>
 
+[![Zenodo Master](https://zenodo.org/badge/DOI/10.5281/zenodo.17702548.svg)](https://doi.org/10.5281/zenodo.17702548)
 [![Zenodo Master Record](https://zenodo.org/badge/DOI/10.5281/zenodo.17702548.svg)](https://doi.org/10.5281/zenodo.17702548)
 [![Zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.17702548.svg)](https://doi.org/10.5281/zenodo.17702548) [![License: CC0-1.0](https://img.shields.io/badge/License-CC0--1.0-brightgreen.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 
