@@ -1,5 +1,6 @@
 # The Spiral Codex: Living Repository of Helix-Driven Frameworks
 
+[![Zenodo Master Record](https://zenodo.org/badge/DOI/10.5281/zenodo.17702548.svg)](https://doi.org/10.5281/zenodo.17702548)
 [![Zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.17702548.svg)](https://doi.org/10.5281/zenodo.17702548) [![License: CC0-1.0](https://img.shields.io/badge/License-CC0--1.0-brightgreen.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 
 ## Overview
