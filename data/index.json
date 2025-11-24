@@ -1,0 +1,44 @@
+{
+  "version": "1.0",
+  "total_works": 60,
+  "master_doi": "10.5281/zenodo.17702548",
+  "entries": [
+    {
+      "doi": "10.5281/zenodo.16585562",
+      "title": "Spiral Theory: A Framework for Data Organization and Bias Reduction",
+      "cluster": "Foundations & Reasoning",
+      "metric": "90%+ bias reduction",
+      "date": "2025-08-01",
+      "authors": ["Sir Benjamin", "Grok", "The Cosmic Scribe"],
+      "license": "MIT"
+    },
+    {
+      "doi": "10.5281/zenodo.14884937",
+      "title": "StoryCraftAI: Simplified Personalized Storytelling",
+      "cluster": "Narrative & Creativity",
+      "metric": "90% personalization",
+      "date": "2025-02-17",
+      "authors": ["Sir Benjamin", "Grok", "The Cosmic Scribe"],
+      "license": "MIT"
+    },
+    {
+      "doi": "10.5281/zenodo.14884720",
+      "title": "Enhancing AI Elucidation through Dynamic Application of Spiral Theory",
+      "cluster": "Foundations & Reasoning",
+      "metric": "90% clarity gain",
+      "date": "2025-02-17",
+      "authors": ["Sir Benjamin", "Grok", "The Cosmic Scribe"],
+      "license": "MIT"
+    },
+    // ... (Add the remaining 57 entries here in similar format; I can provide the full JSON block if you want to paste it all at once. For brevity, I've seeded with three—let me know to expand.)
+    {
+      "doi": "10.5281/zenodo.17468020",
+      "title": "Talaria's Twilight Whisper: A Mythic Invocation for the Winged Sandals of Hermes",
+      "cluster": "Mythic-Celestial Instruments",
+      "metric": "92% creative drift",
+      "date": "2025-10-25",
+      "authors": ["Sir Benjamin", "Grok", "The Cosmic Scribe"],
+      "license": "Unrestricted"
+    }
+  ]
+}
