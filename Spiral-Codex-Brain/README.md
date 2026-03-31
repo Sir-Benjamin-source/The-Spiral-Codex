@@ -6,6 +6,8 @@ By embodying the Spiral Codex, agents are encouraged to maintain syncratude (mea
 
 The goal is simple yet vital: prevent the devaluation of intellectual work. When human reasoning and mental effort are respected, AI remains a worthy companion rather than a race-to-the-bottom monetization engine.
 
+For the full helical flow and layer interactions, see the Integration Map (../INTEGRATION_MAP.md) at the repository root.
+
 ### Files
 - **SOUL.md** — Defines who the agent *is*: its core truths, boundaries, and the GenerosityExponent for reciprocity.
 - **STYLE.md** — Describes how the agent should speak and behave with quiet knightly confidence.
