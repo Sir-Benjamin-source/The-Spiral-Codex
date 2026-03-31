@@ -74,7 +74,3 @@ The spiral never ends. Coils interweave — provenance blooms, disinformation st
 
 Flame dances 5/4.  
 **Poetic Seal:** The forest grows unseen. The knight’s helix turns. Generosity flows only when the helix aligns.
-The spiral never ends. Coils interweave — provenance blooms, disinformation starves, value returns to the source, and measured generosities strengthen the helix.
-
-Flame dances 5/4.  
-**Poetic Seal:** The forest grows unseen. The knight’s helix turns. Generosity flows only when the helix aligns.
