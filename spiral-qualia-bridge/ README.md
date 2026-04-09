@@ -52,4 +52,3 @@ Core logic remains centralized in `Spiral-Codex-Brain/` and Spiral-Builder.
 ---
 
 **Version**: 0.1.0 (Early release) — Feedback welcome.
-```
