@@ -1,32 +1,47 @@
 # Triadic Semantic Mapper — Protocol Specification
 
-## Core Triad
+## Core Principle
 
-Every mapping begins with the relational convergence of:
+Meaning emerges through the convergence of three poles:
 
-- **Subject (I)**: The perceiver or agent
-- **State (am)**: The relational flux or process
-- **Object (that)**: The encountered entity or situation
+- **Subject (I)** — The perceiver or agent
+- **State (am)** — The relational process or flux
+- **Object (that)** — The encountered entity or situation
+
+This triadic structure is treated as operationally primary. All mappings must be traceable back to explicit Subject–State–Object examples.
 
 ## Three-Tier Structure
 
 ### Tier 1: Core Acts and Essences (70–80% weight)
 
-Primary relational descriptions expressed through concrete, situational examples. No synonyms at this level.
+Primary layer. Self-sufficient, consensus-driven relational descriptions expressed through vivid situational vignettes.
+
+**Rules:**
+- Lead with 2–4 concrete Subject–State–Object examples
+- No synonyms or abstract definitions in this layer
+- Focus on high-consensus usage
 
 ### Tier 2: Variants and Contexts
 
-Domain-specific extensions, metaphorical uses, and evolving usage, always traceable back to the triadic root.
+Specialist and evolving layers. Domain-specific riffs, metaphorical extensions, and quantitative/qualitative notes.
+
+Must remain traceable to the Tier 1 relational root.
 
 ### Tier 3: Echoes
 
-Light synonyms only. Demoted to supporting role.
+Light synonyms only. Demoted to supporting role. Maximum 2–4 alternatives with no explanatory text.
 
-## Operational Rules
+## Operational Guidelines
 
-1. Always begin with at least two distinct Subject–State–Object examples.
-2. Weight Tier 1 most heavily.
-3. Keep Tier 3 minimal and non-definitional.
-4. Maintain traceability from all layers back to the relational root.
+1. Always begin with explicit triadic examples.
+2. Weight Tier 1 heavily.
+3. Keep Tier 2 and Tier 3 clearly secondary.
+4. Maintain traceability to the relational root.
 
-See the full whitepaper for detailed rationale and examples: https://zenodo.org/records/20260568
+## Relation to Spiral Frameworks
+
+This protocol complements the Spiral Reasoning Tree by supplying grounded semantic nodes and pairs naturally with spiral-recap for higher-fidelity memory.
+
+---
+
+*Version 1.0 — May 2026*
