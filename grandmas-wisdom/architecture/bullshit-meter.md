@@ -47,35 +47,24 @@ The citation is unsupported by the source, contradicts well-established related 
 
 ## Sub-Score Categories
 
-When performing evaluation, Grandma’s Wisdom assesses the following dimensions. Each sub-score should be accompanied by **2–4 sentences** of explanation that include:
+When performing evaluation, Grandma’s Wisdom assesses the following dimensions:
 
-- What the score reflects in this specific case
-- The key factors that led to the assigned rating
-- What would meaningfully improve or worsen the score
+- **Evidential Support from Related Works** (highest weight)
+- **Logical Consistency & Internal Validity**
+- **Contextual Fidelity / Misattribution Risk**
+- **Provenance & Traceability Strength**
+- **Overclaim / Scope Violation Risk**
 
-### 1. Evidential Support from Related Works (Highest Weight)
-Measures how well the cited source is backed by directly relevant, high-quality work in the broader literature. This is the most important dimension.
-
-### 2. Logical Consistency & Internal Validity
-Evaluates whether the source’s own data, methods, and conclusions are internally coherent and whether the claim being supported follows logically from the source.
-
-### 3. Contextual Fidelity / Misattribution Risk
-Assesses how accurately the source is represented and whether important scope limitations, sample characteristics, or qualifiers are preserved or stripped.
-
-### 4. Provenance & Traceability Strength
-Reflects the clarity and reliability of bibliographic information and the ability to trace key claims back to verifiable sources (via Version Checker and Linkweaver).
-
-### 5. Overclaim / Scope Violation Risk
-Measures the gap between what the source actually demonstrates and how it is being used in the current argument. This includes both overgeneralization and treating tentative findings as definitive.
+Each dimension contributes to the final score and is reported in the breakdown.
 
 ## Output Requirements
 
 Every Bullshit Meter result must include:
 
 1. Overall score (1–10)
-2. Structured breakdown of the sub-scores above (each with 2–4 sentences of explanation)
-3. **What is tenable** — A paragraph of 3–5 sentences clearly describing what can reasonably be taken from the source in the current context.
-4. **What is not tenable** — A paragraph of 3–5 sentences clearly describing claims or uses that go beyond what the evidence supports.
+2. Structured breakdown of the sub-scores above
+3. Explicit **What is tenable** statement
+4. Explicit **What is not tenable** statement
 5. Recommended action for an agent or researcher
 6. (Optional) Probability estimates on key sub-claims, only when sufficient contextual foundation exists
 
