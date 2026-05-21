@@ -73,9 +73,9 @@ Measures the gap between what the source actually demonstrates and how it is bei
 Every Bullshit Meter result must include:
 
 1. Overall score (1–10)
-2. Structured breakdown of the sub-scores above
-3. Explicit **What is tenable** statement
-4. Explicit **What is not tenable** statement
+2. Structured breakdown of the sub-scores above (each with 2–4 sentences of explanation)
+3. **What is tenable** — A paragraph of 3–5 sentences clearly describing what can reasonably be taken from the source in the current context.
+4. **What is not tenable** — A paragraph of 3–5 sentences clearly describing claims or uses that go beyond what the evidence supports.
 5. Recommended action for an agent or researcher
 6. (Optional) Probability estimates on key sub-claims, only when sufficient contextual foundation exists
 
