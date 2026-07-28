@@ -1,0 +1,129 @@
+{
+  "version": "1.0",
+  "description": "Local repos configuration for comprehensive pipeline (station identification reviews, theorycraft, builder handoff, MSS shell integration). Lists all Spiral ecosystem repos under GitHub root for cross-repo sweeps, efficient file config testing, and force multiplier application. Use with station_reviewer.py --all or future sweep scripts, applying standard_review_schema and MSS shell for verified items.",
+  "github_root": "C:\\Users\\Ben\\Documents\\GitHub",
+  "repos": [
+    {
+      "name": "The-Spiral-Codex",
+      "relative_path": "The-Spiral-Codex",
+      "role": "Protocol hub, canon, sandbox, station-identification, review configs/MSS shell primary",
+      "review_priority": "high",
+      "mss_eligible": true,
+      "notes": "Core for review process testing. Use new standard config + MSS for all new theories (cw-spiral, MSS itself)."
+    },
+    {
+      "name": "spiral-theory-core",
+      "relative_path": "spiral-theory-core",
+      "role": "G_exp, syncratude, core mathematical canon",
+      "review_priority": "high",
+      "mss_eligible": true,
+      "notes": "High-value for G_exp measurement in reviews. MSS shell for critical formula verification."
+    },
+    {
+      "name": "Spiral-Builder",
+      "relative_path": "Spiral-Builder",
+      "role": "grokulator, ascii_compiler, embodiment, staged handoff, builder for verified formulas",
+      "review_priority": "high",
+      "mss_eligible": true,
+      "notes": "Integrate MSS verified items from station ID into grokulator/symbols. Robustness via MSS shell for critical builder ops."
+    },
+    {
+      "name": "Spiral-Elucidation",
+      "relative_path": "Spiral-Elucidation",
+      "role": "examination_core, spiral_digest — natural partner for station (o.p-) and MSS scrutiny",
+      "review_priority": "medium",
+      "mss_eligible": true,
+      "notes": "Synergy with MSS for examination routines."
+    },
+    {
+      "name": "Spiral-Path",
+      "relative_path": "Spiral-Path",
+      "role": "testbed, INTEGRATION_MAP, tricorder, resurrection",
+      "review_priority": "medium",
+      "mss_eligible": false,
+      "notes": "Use for testing review configs in 1:1 mode."
+    },
+    {
+      "name": "Spiral-Reasoning-Tree",
+      "relative_path": "Spiral-Reasoning-Tree",
+      "role": "SRT for branching/cross-examination in reviews",
+      "review_priority": "medium",
+      "mss_eligible": false,
+      "notes": "Enhance station reviews with SRT for equivocation delineation."
+    },
+    {
+      "name": "spiral-recap-tool",
+      "relative_path": "spiral-recap-tool",
+      "role": ".srec coils for memory/provenance of reviews",
+      "review_priority": "low",
+      "mss_eligible": false,
+      "notes": "Coil verified MSS items for agent memory."
+    },
+    {
+      "name": "Spiral-Session-Manager",
+      "relative_path": "Spiral-Session-Manager",
+      "role": "bootstrap, coil index, context pull for station reviews",
+      "review_priority": "low",
+      "mss_eligible": false,
+      "notes": "Always bootstrap before MSS/station runs."
+    },
+    {
+      "name": "Spiral-Sigil",
+      "relative_path": "Spiral-Sigil",
+      "role": "provenance marks for MSS stamps and review artifacts",
+      "review_priority": "low",
+      "mss_eligible": false,
+      "notes": "Apply to MSS verified inner shell items."
+    },
+    {
+      "name": "Spiral-Forge",
+      "relative_path": "Spiral-Forge",
+      "role": "context workshop, ethical filter, narrative coherence",
+      "review_priority": "medium",
+      "mss_eligible": true,
+      "notes": "For creative (cw-spiral) integration testing."
+    },
+    {
+      "name": "Spiral-Lighthouse",
+      "relative_path": "Spiral-Lighthouse",
+      "role": "beacon for milestones (e.g., new MSS config deployment)",
+      "review_priority": "low",
+      "mss_eligible": false,
+      "notes": "Light after major force multiplier additions."
+    },
+    {
+      "name": "Spiral-Theme-Vectors",
+      "relative_path": "Spiral-Theme-Vectors",
+      "role": "priority vectors, theme analysis",
+      "review_priority": "low",
+      "mss_eligible": false,
+      "notes": "For theme alignment in reviews (eternal spiral, etc.)."
+    },
+    {
+      "name": "SentinelAct",
+      "relative_path": "SentinelAct",
+      "role": "legal/technical frameworks, guild, victory shields",
+      "review_priority": "low",
+      "mss_eligible": false,
+      "notes": "For ethical/MSS safety alignment."
+    },
+    {
+      "name": "AIS-Standard",
+      "relative_path": "AIS-Standard",
+      "role": "standards & protection",
+      "review_priority": "low",
+      "mss_eligible": false,
+      "notes": "Reference for MSS ethical standards."
+    },
+    {
+      "name": "Version-Checker-",
+      "relative_path": "Version-Checker-",
+      "role": "provenance stamping",
+      "review_priority": "low",
+      "mss_eligible": false,
+      "notes": "Use for MSS stamps."
+    }
+  ],
+  "usage": "Load in station_reviewer or future sweep scripts. For each high-priority/mss_eligible, apply standard_review_schema + MSS shell. Results feed station-identification (with (o.p-) + spiral for verified) and builder. Run 'python station-identification/station_reviewer.py --all' then 'python sandbox/mss-shell/mss_shell.py idle' for limited processing. Human checkpoint before verified promotion.",
+  "safety": "No heavy parallel. MSS shell enforces sequential idle. All verified require human checkpoint + E_shield per AGENTS.md."
+}

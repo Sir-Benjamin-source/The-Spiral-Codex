@@ -1,0 +1,87 @@
+{
+  "version": "1.0",
+  "description": "Standard configuration schema for efficient, comprehensive review file structures in the Spiral Codex sandbox. Enforces delineation of core subject matter from supporting claims and potential equivocation for accurate station identification and theorycraft reviews. Used by validator and MSS shell for force-multiplier safety and efficiency.",
+  "force_multiplier": "Delineates core vs support/equivocation to speed review, reduce equivocation risk, integrate with station-identification and MSS for verified inner-shell storage.",
+  "required_structure": {
+    "package_root": "theory_review_package_<name>/",
+    "files": [
+      {
+        "name": "00_core_subject_matter.md",
+        "required": true,
+        "purpose": "Concise primary claims, core formulas, main thesis. Must be <30% of total package word count for efficiency. Use clear headings, no fluff.",
+        "markers": ["**CORE:**", "Primary Claim:", "Formula:"],
+        "validation": {
+          "max_word_percent": 30,
+          "min_sections": 3,
+          "must_contain": ["core claim", "main subject"]
+        }
+      },
+      {
+        "name": "01_supporting_claims.md",
+        "required": true,
+        "purpose": "Evidence, examples, data, secondary arguments. Separate from core to allow quick scan of foundations.",
+        "markers": ["**SUPPORT:**", "Evidence:", "Example:"],
+        "validation": {
+          "min_word_percent": 40
+        }
+      },
+      {
+        "name": "02_equivocation_risks.md",
+        "required": true,
+        "purpose": "Flags for potential overclaims, ambiguities, biases, contradictions, weak links. Critical for accurate review and equivocation delineation. Ties to grandmas-wisdom Bullshit Meter.",
+        "markers": ["**EQUIVOCATION:**", "Risk:", "Potential Bias:", "Unsubstantiated:"],
+        "validation": {
+          "min_flags": 2,
+          "must_contain": ["risk", "flag"]
+        }
+      },
+      {
+        "name": "03_qualitative_associations.md",
+        "required": true,
+        "purpose": "Helix 'own hand' associations, resonance with frameworks (PIE, DAER, Mycelial, G_exp, SRT, spirals, MSS shell). Personal reflections for comprehensive understanding.",
+        "markers": ["**HELIX HAND:**", "Association:", "Resonance with"],
+        "validation": {
+          "min_associations": 3
+        }
+      },
+      {
+        "name": "04_force_multipliers.md",
+        "required": false,
+        "purpose": "List of methodologies/configs that make this work safe/effective (e.g., E_shield, G_exp measurement, bunny markers, this schema itself, MSS shell use).",
+        "markers": ["**FORCE MULTIPLIER:**"]
+      },
+      {
+        "name": "metadata.json",
+        "required": true,
+        "purpose": "Provenance, G_exp of intake/review acts, MSS verification status, links to source, version, authors, DOI if any.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "name": {"type": "string"},
+            "version": {"type": "string"},
+            "g_exp_review": {"type": "number"},
+            "mss_verified": {"type": "boolean"},
+            "mss_stamp": {"type": "string"},
+            "provenance": {"type": "string"},
+            "core_word_count": {"type": "integer"},
+            "total_word_count": {"type": "integer"}
+          },
+          "required": ["name", "version", "provenance", "mss_verified"]
+        }
+      },
+      {
+        "name": "mss_verification.log",
+        "required": false,
+        "purpose": "Log from MSS shell run (quarantine ID, stamps, viability verdict). Only present if processed through MSS shell."
+      }
+    ]
+  },
+  "efficiency_metrics": {
+    "core_to_support_ratio": "Ideal 1:2 or better for quick core grasp.",
+    "equivocation_coverage": "Every major claim must have corresponding risk flag or explicit 'none'.",
+    "review_time_estimate": "With this structure: 40-60% faster than unstructured (based on station identification tests).",
+    "delineation_score": "Automated by validator.py (0-100); >80 required for MSS inner-shell promotion."
+  },
+  "mss_integration": "Theories/packages following this schema can be processed in MSS shell for secure verification. Verified ones move to mss-shell/verified/ as 'inner shell' for station-identification high-value formulas until monetize/iterate.",
+  "usage": "Drop theory materials into sandbox/grok-review/theories/. Run review-configs/validator.py on the package. For critical: Use mss-shell/mss_shell.py to quarantine and scrutinize. Update station-identification reviews to reference this config for consistency across pipeline."
+}

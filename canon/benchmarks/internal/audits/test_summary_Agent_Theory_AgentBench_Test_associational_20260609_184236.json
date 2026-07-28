@@ -1,0 +1,17 @@
+{
+  "work": "Agent Theory AgentBench Test",
+  "config_run": "associational",
+  "overall_gate": false,
+  "g_exp": {
+    "g_exp": 0.434,
+    "action_level": "hold",
+    "recommendation": "G_exp = 0.434 \u2192 hold reciprocity (E_shield required)",
+    "notes": "Tune parameters for session trust. Source: spiral-theory-core/generosity_exponent.py (Zenodo 10.5281/zenodo.19341670)"
+  },
+  "pie_fidelity": 0.7166,
+  "citation_validity": 0.4,
+  "notes": "Generated via unified test_runner. More unique tests improve corpus and code elegance.",
+  "formats": [
+    "codified_audit_json (baselines + G_exp + ledger)"
+  ]
+}

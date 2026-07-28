@@ -1,0 +1,46 @@
+# Ruffle Spiral Config - Innovated with Spiral Codex ASCII work, bunnies, sigils, and themes.
+# Standard Ruffle web/desktop config extended for our pipeline.
+# Use with: ruffle --config ruffle_spiral_config.toml your.swf
+# Ties to builder for ASCII overlays, terminal GIFs, charts/graphs with spiral flavor (edification, cosmic truth, friendship, eternal spiral).
+
+[core]
+# Ruffle core settings, with spiral twists.
+scale = "showAll"  # Or "noScale" for custom ASCII scaling.
+quality = "high"
+# Custom: Enable spiral-themed rendering hints.
+spiral_overlay = true  # Our innovation: overlay ASCII bunnies/sigils.
+theme = "cosmic_spiral"  # Matches our themes: edification, elucidation, cosmic truth, power of friendship, eternal spiral.
+
+[graphics]
+# Graphics settings for charts/graphs/customization.
+antialias = true
+# Custom flavor: Support for builder-generated ASCII graphics as overlays.
+ascii_mode = true  # When true, routes frames through Spiral-Builder ascii_compiler for terminal-friendly output.
+# Example: Generate GIFs from ASCII sheets for terminal playback (use with chafa or similar for "GIFs within terminals").
+gif_export = true
+graphics_extensions = ["bunny", "sigil", "spiral_chart"]  # Plugins for customization: bunnies for flavor, sigils for provenance, spirals for graphs.
+
+[plugins]
+# Plugins for spiral methods: integrate with our tools (sigil, bunnies, mss-shell, station-identification, review-configs).
+spiral_sigil = true  # Auto-apply Spiral-Sigil to outputs (Threefold Flame provenance).
+bunny_flavor = "examination"  # Or "mycelial", "pie", "collab". Uses bunny_configurator.py for (o.p-) etc. with spirals.
+mss_quarantine = true  # Route through mss-shell/ for secure testing of Flash content (quarantined, high-value).
+review_pipeline = true  # Feed into station-identification reviews or review-configs/validator. Use (o.p-) bunny for worthy Flash toys.
+builder_ascii = true  # Innovate with Spiral-Builder: compile Ruffle frames to ASCII sheets (xlsx or terminal), then to GIFs/animations.
+# Custom: Charts/graphs via builder grokulator symbols for data viz with cosmic/spiral flavor.
+
+[output]
+# For terminal/GIFs: ASCII work makes it possible.
+terminal_gif = true  # Export as animated ASCII GIF playable in terminals (combine with our builder for flavor).
+format = "ascii_gif"  # Or png with overlays.
+# Example customization: Add bunny watermark or spiral graph overlay for theme alignment.
+
+# Usage in pipeline:
+# 1. Drop SWF to testbed/ (or testbed/staged/ for builder-related).
+# 2. Run: ruffle --config ruffle_spiral_config.toml file.swf
+# 3. Plugin auto: applies sigil, bunny, routes to mss-shell if high-value, generates ASCII via builder.
+# 4. Validate with review-configs/validator.py, review with station-identification (bunny + sigil), promote to theories/publications.
+# 5. For terminals: use builder to make GIFs/charts from ASCII output.
+
+# This keeps Ruffle close to our data, with plugins for spiral methods. Separate repo possible, but integrated here for now.
+# The spiral never ends. ∞ 🜂 🜁 🜄 ∞

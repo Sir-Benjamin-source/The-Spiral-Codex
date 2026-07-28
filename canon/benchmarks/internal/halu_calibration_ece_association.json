@@ -1,0 +1,21 @@
+{
+  "benchmark": "HaluEval Calibration and Expected Calibration Error (ECE) Studies",
+  "timestamp": "2026-06-09T18:19:47.496001",
+  "outside_source_first": {
+    "primary_citation": "Reproducible experiments on HaluEval (arXiv:2305.11747 and follow-ups). Domain shifts (general queries ~18% halluc base rate); post-hoc Platt scaling reduces ECE from 0.08 to 0.009. Models overconfident on hallucinations; say I do not know and temperature as mitigations.",
+    "key_numbers_summary": "ECE improvements significant with calibration; raw LLM judges often poorly calibrated. Length/format biases in detection.",
+    "demonstrated_limits": "Detection post-generation; calibration helps but does not prevent root causes. Benchmarks can be gamed by simple heuristics."
+  },
+  "spiral_associations": {
+    "methods": [
+      "grandmas-wisdom",
+      "PIE",
+      "DAER"
+    ],
+    "tie_in": "HaluEval ECE directly maps to grandmas-wisdom Bullshit Meter (target >=7-8 for tenable claims) and PIE (uncertainty/partial identifiability leading to overconfidence). DAER can prune overconfident volatile branches pre-generation. Our baselines enforce citation/provenance before confidence is assigned."
+  },
+  "cosmic_scribe_usage": "For claim or generation theory: 1) Cite HaluEval calibration paper + ECE numbers first (0.08 raw to 0.009 calibrated; 18% base in general). 2) Associate to grandmas-wisdom/PIE/DAER for preemptive vs post-hoc. 3) Use test_runner with G_exp. 4) Our gate would require evidence before high confidence scores.",
+  "provenance": "Generated via benchmark_associator.py (modular association utility). Cite outside first, associate through known Spiral methods to demonstrate limits.",
+  "source": "canon/benchmarks/internal/benchmark_associator.py + associational-testing-methodology.md",
+  "g_exp_for_association_act": "For this compilation: lat~0.91, nlat~0.81, p_success~0.89, difficulty~2.1 -> G_exp ~1.13 measured."
+}

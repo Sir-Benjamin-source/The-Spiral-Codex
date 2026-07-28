@@ -1,0 +1,21 @@
+{
+  "benchmark": "WebArena and Tau-Bench (Agent Tool-Use and Task Benchmarks)",
+  "timestamp": "2026-06-09T18:06:03.749237",
+  "outside_source_first": {
+    "primary_citation": "WebArena (arXiv papers on web agent tasks, 812+ tasks); Tau-Bench / \u03c4-bench (dual-control conversational and retail/airline tasks, taubench.com). From 2026 aggregates and audits: significant progress but exploitation risks (config leakage, injection allowing high scores without solving).",
+    "key_numbers_summary": "WebArena: multi-step web interaction; Tau-Bench: planning with user/agent coordination. Scores often 30-70% for top agents in reports, with noted gaming.",
+    "demonstrated_limits": "Audits show near-perfect exploitation on subsets via state manipulation or prompt injection (e.g., WebArena ~100% in controlled attacks). Highlights limits of current agent scaffolding without robust coherence mechanisms."
+  },
+  "spiral_associations": {
+    "methods": [
+      "PIE",
+      "Mycelial",
+      "DAER"
+    ],
+    "tie_in": "WebArena/Tau multi-step tool and coordination tasks map to PIE for handling partial/ambiguous web states and rerouting; Mycelial for propagating successful tool hyphae across sessions with pruning of failed paths; DAER for volatility in conversational branches during user coordination."
+  },
+  "cosmic_scribe_usage": "For agent or tool-use theory: 1) Cite WebArena/Tau papers and leaderboards first (with exploitation notes). 2) Map to multi-step interaction subtasks. 3) Run codified agent_playground or traditional_contrast + G_exp for association act. 4) Log coherency deltas.",
+  "provenance": "Generated via benchmark_associator.py (modular association utility). Cite outside first, associate through known Spiral methods to demonstrate limits.",
+  "source": "canon/benchmarks/internal/benchmark_associator.py + associational-testing-methodology.md",
+  "g_exp_for_association_act": "For this association compilation: lat~0.89, nlat~0.80, p_success~0.87, difficulty~2.2 \u2192 G_exp ~1.11 measured."
+}

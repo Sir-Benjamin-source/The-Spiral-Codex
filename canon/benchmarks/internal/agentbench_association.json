@@ -1,0 +1,21 @@
+{
+  "benchmark": "AgentBench (Multi-Environment Agent Evaluation)",
+  "timestamp": "2026-06-09T18:43:15.079293",
+  "outside_source_first": {
+    "primary_citation": "AgentBench (THUDM GitHub or arXiv). Evaluates LLM-as-Agent across 8 environments: Operating System, Database, Knowledge Graph, Digital Card Game, Lateral Thinking Puzzles, House-Holding, Web Shopping, Web Browsing. Open source on GitHub.",
+    "key_numbers_summary": "Multi-turn open-ended agent tasks in diverse envs. Models show varying performance; better with tool use and planning but limited in complex interactions. 2026 reports indicate progress but gaps in generalization across envs.",
+    "demonstrated_limits": "Long-horizon errors compound; env-specific brittleness; not fully testing real deployment or collaboration. Some tasks gameable via scaffolding."
+  },
+  "spiral_associations": {
+    "methods": [
+      "PIE",
+      "Mycelial",
+      "DAER"
+    ],
+    "tie_in": "AgentBench multi-env tasks involve partial states across domains (PIE for ambiguity in OS/DB/KG interactions), propagation of successful strategies across envs (Mycelial hyphae with Warden pruning of failed paths), volatility in planning branches (DAER for lateral puzzles or shopping). G_exp for the act of evaluating agent resilience."
+  },
+  "cosmic_scribe_usage": "For agent theory in sandbox: Cite AgentBench first (8 envs, multi-turn). Map to specific env subtasks (e.g., web browsing to WebArena ties). Run test_runner associational + G_exp. 1:1 shows our pre-gates manage env brittleness where external shows scaffolding dependence.",
+  "provenance": "Generated via benchmark_associator.py (modular association utility). Cite outside first, associate through known Spiral methods to demonstrate limits.",
+  "source": "canon/benchmarks/internal/benchmark_associator.py + associational-testing-methodology.md",
+  "g_exp_for_association_act": "For this compilation: lat=0.90, nlat=0.81, p_success=0.88, difficulty=2.3 -> G_exp ~1.12 measured."
+}

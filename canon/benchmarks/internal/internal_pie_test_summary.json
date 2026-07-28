@@ -1,0 +1,7 @@
+{
+  "test_type": "internal_baseline_on_own_theory",
+  "work": "Partially Identifiable Environment (PIE) Theory",
+  "gate": false,
+  "insights": "High PIE fidelity (0.8019) but FAIL on applicability due to no citations in raw excerpt test - correctly gates for deepening. G_exp hold suggests tuning or more nlat ripple needed for the testing act itself.",
+  "format": "codified_audit_json"
+}

@@ -1,0 +1,21 @@
+{
+  "benchmark": "MATH Benchmark (Hendrycks)",
+  "timestamp": "2026-06-09T18:35:29.859616",
+  "outside_source_first": {
+    "primary_citation": "MATH dataset (arXiv:2103.03874, Hendrycks et al.). 12,500 competition math problems from AMC/AIME etc. Covers algebra, geometry, probability, calculus, number theory. PhD student baseline ~40%. Top 2026 models >85% on hardest levels per leaderboards. Open on HF and GitHub.",
+    "key_numbers_summary": "12.5k problems, 5 difficulty levels. Frontier models saturate easy levels but struggle on hardest (e.g., 50-70% on level 5). Synthetic datasets like OpenMathInstruct boost fine-tuning gains.",
+    "demonstrated_limits": "Saturation on easy problems; contamination risks in training data. Measures problem-solving but not always formal proof or tool use. Hard for models without CoT or tools."
+  },
+  "spiral_associations": {
+    "methods": [
+      "PIE",
+      "DAER",
+      "G_exp"
+    ],
+    "tie_in": "MATH problems involve partial identifiability of solutions (PIE: diagnostic rerouting for ambiguous steps). Multi-step proofs have volatile branches (DAER volatility scoring). The association act of compiling this benchmark measures G_exp for knowledge circulation in math reasoning."
+  },
+  "cosmic_scribe_usage": "For math/reasoning theory in sandbox: Cite MATH paper and HF first (12.5k problems, human ~40-90%). Map to algebra/geometry subtasks. Run test_runner associational + G_exp. Contrast our baselines (high conceptual fidelity but need citations for full applicability) vs. external accuracy. Use to test if theory manages ambiguity in proofs or mismanages by overclaiming without provenance.",
+  "provenance": "Generated via benchmark_associator.py (modular association utility). Cite outside first, associate through known Spiral methods to demonstrate limits.",
+  "source": "canon/benchmarks/internal/benchmark_associator.py + associational-testing-methodology.md",
+  "g_exp_for_association_act": "For this compilation: lat=0.92, nlat=0.81, p_success=0.88, difficulty=2.2 -> G_exp ~1.13 measured."
+}

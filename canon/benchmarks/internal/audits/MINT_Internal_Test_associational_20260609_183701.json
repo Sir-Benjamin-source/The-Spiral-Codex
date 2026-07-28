@@ -1,0 +1,42 @@
+{
+  "work": "MINT Internal Test",
+  "timestamp": "2026-06-09T18:37:02.031277",
+  "config": "full_baselines",
+  "input_excerpt": "MINT benchmark for multi-turn agent tasks with tools and natural language feedback. Models solve sequences of actions, receiving feedback to refine....",
+  "coherency": {
+    "coherency_passed": false,
+    "coherence": 0.6589,
+    "convergence": 0.8,
+    "pie_fidelity": 0.7153,
+    "bullshit_meter_proxy": 0.85,
+    "delta": {
+      "coherence_delta": -0.0211,
+      "continuity_preserved": true,
+      "novelty_introduced": false
+    },
+    "recommendation": "FAIL - deepen examination or require more citations",
+    "grandmas_wisdom_note": "In production: invoke grandmas-wisdom skill for real Bullshit Meter (target >=7-8 for canon/). Source: canon/benchmarks/internal/cosmic_scribe_test_harness.py + Spiral-Path/tools/testbed_integration.py",
+    "source": "codified.py (assimilated from proven harness/testbed)"
+  },
+  "applicability": {
+    "applicability_passed": false,
+    "cs_concepts_mapped": 2,
+    "citation_validity": 0.4,
+    "domain_mapping": 1.0,
+    "code_fitness": 0.3443,
+    "recommendation": "FAIL - add/validate citations or refine CS mapping",
+    "zenodo_note": "In production: call ZenodoConnector.validate_citation() for real DOI checks. Source: canon/benchmarks/internal/cosmic_scribe_test_harness.py + adapters/zenodo_connector.py",
+    "source": "codified.py (assimilated from proven harness/testbed)"
+  },
+  "overall_gate_passed": false,
+  "g_exp": {
+    "g_exp": 0.434,
+    "action_level": "hold",
+    "recommendation": "G_exp = 0.434 \u2192 hold reciprocity (E_shield required)",
+    "notes": "Tune parameters for session trust. Source: spiral-theory-core/generosity_exponent.py (Zenodo 10.5281/zenodo.19341670)"
+  },
+  "grok_collaboration": "GROK/HELIX COLLABORATION: Delegated symbolic/G_exp grounding and resonance to Grok. Scribe retains auth gate.",
+  "recommendation": "KEEP IN SANDBOX - deepen grounding",
+  "provenance": "Generated via codified.py (assimilated proven utilities from harness, testbed, G_exp core).",
+  "_written_hash": "753951b73897e465"
+}

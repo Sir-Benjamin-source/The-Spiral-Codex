@@ -1,0 +1,20 @@
+{
+  "benchmark": "ARC-AGI-2",
+  "timestamp": "2026-06-09T18:06:03.294429",
+  "outside_source_first": {
+    "primary_citation": "ARC Prize (arcprize.org/arc-agi/2). Human near-ceiling on calibrated sets. Base frontier low single digits; agentic REPL boosts to 50-85%+ (2026 reports, heavy scaffolding).",
+    "key_numbers_summary": "Grid pattern abstraction and novel rule induction. Tests fluid intelligence/core generalization beyond memorization.",
+    "demonstrated_limits": "Extreme difficulty for current methods on true novelty; agentic solutions require significant engineering/cost. Base models reveal abstraction ceiling."
+  },
+  "spiral_associations": {
+    "methods": [
+      "PIE",
+      "DAER"
+    ],
+    "tie_in": "ARC novel patterns are pure partial-identifiability (PIE: reroute on high |Il - Ex| gaps). Rule discovery involves stable core vs volatile branches (DAER volatility scoring as coherence gate for induction traces)."
+  },
+  "cosmic_scribe_usage": "For abstraction/reasoning theory: Cite ARC-AGI-2 + human vs AI numbers first. Map to grid/rule subtasks. Run coherency baseline (PIE fidelity) + G_exp. Contrast with our pre-gates vs agentic scaffolding reliance. codified.py traditional_contrast or full_playground.",
+  "provenance": "Generated via benchmark_associator.py (modular association utility). Cite outside first, associate through known Spiral methods to demonstrate limits.",
+  "source": "canon/benchmarks/internal/benchmark_associator.py + associational-testing-methodology.md",
+  "g_exp_for_association_act": "lat ~0.90, nlat ~0.82 \u2192 G_exp ~1.12 'measured'."
+}

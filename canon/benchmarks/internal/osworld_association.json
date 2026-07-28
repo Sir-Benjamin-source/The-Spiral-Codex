@@ -1,0 +1,21 @@
+{
+  "benchmark": "OSWorld (Desktop Agent Tasks)",
+  "timestamp": "2026-06-09T18:43:15.082335",
+  "outside_source_first": {
+    "primary_citation": "OSWorld benchmark (papers or GitHub). Realistic desktop OS tasks across OSes; agents must interact with GUI, files, etc. Accuracy rose from ~12% to 66.3% in 2025-2026 reports, within 6pts of humans but still 1-in-3 fails on structured tasks.",
+    "key_numbers_summary": "Multi-OS desktop tasks (GUI, apps). Top ~66%; humans 90%+. Progress in agentic but jagged (high on some, brittle on others).",
+    "demonstrated_limits": "Jagged performance; real-world deployment gaps; not testing multi-agent or long-term memory well. Audits show exploitation risks in similar agent evals."
+  },
+  "spiral_associations": {
+    "methods": [
+      "PIE",
+      "Mycelial",
+      "G_exp"
+    ],
+    "tie_in": "OSWorld desktop interactions map to PIE for partial observability in GUI states (rerouting ambiguous actions), Mycelial for propagating successful desktop hyphae across sessions with pruning, G_exp for measuring agent friendship with env (lat local actions, nlat cross-env ripple). Ties to jagged frontier in Stanford data."
+  },
+  "cosmic_scribe_usage": "For agent theory: Cite OSWorld first (66% top, 1-in-3 fails, jagged). Map to GUI subtasks. Run test_runner + G_exp for 1:1. Our PIE/Mycelial manage partial states where external shows brittleness.",
+  "provenance": "Generated via benchmark_associator.py (modular association utility). Cite outside first, associate through known Spiral methods to demonstrate limits.",
+  "source": "canon/benchmarks/internal/benchmark_associator.py + associational-testing-methodology.md",
+  "g_exp_for_association_act": "For this: lat=0.89, nlat=0.82, p_success=0.87, difficulty=2.2 -> G_exp ~1.11 measured."
+}

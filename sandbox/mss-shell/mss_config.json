@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "description": "Configuration for MSS (Maximum Scrutiny Space) Shell — inner core shell for secure, bias-free processing of high-value/critical reviews, formulas, and station-identification verified items. Software-based quarantine simulation per the MSS Protocol (quarantined RAM-like isolation via temp dirs, proxy validation, stamping, cross-exam). Enables limited 'parallel' idle processing via queue without risking GPU or system integrity (file-based, low-resource, sequential with sleeps).",
+  "purpose": "Provide AI (Helix/Grok) a safe place for precision-critical work (e.g., verified formulas from station reviews, builder critical ops) that human review latency can't match. Inner shell for sandbox/builder robustness and station-identification (store verified in verified/ until human checkpoint for monetize/iterate).",
+  "quarantine": {
+    "base_dir": "quarantine",
+    "max_size_mb": 50,
+    "timeout_seconds": 120,
+    "isolation": "temp_subdir + restricted_python_subprocess (no shared state, no GPU libs if possible)",
+    "cleanup": "auto on viable/non-viable stamp"
+  },
+  "processing": {
+    "mode": "idle_queue",
+    "queue_dir": "queue",
+    "max_concurrent": 1,
+    "idle_sleep_seconds": 5,
+    "limited_parallel_note": "Strictly 1-at-a-time to avoid GPU crash. Use for background review validation or formula scrutiny. 'Parallel' is simulated via file queue polling."
+  },
+  "validation": {
+    "require_standard_review_config": true,
+    "min_delineation_score": 70,
+    "use_review_validator": "../review-configs/review_validator.py"
+  },
+  "stamping": {
+    "tool": "Version Checker+ (or local provenance via Sigil/Version-Checker-)",
+    "format": "v{version}#MSS-Ref{hash}: {verdict} — {notes} (e.g. Adaptive/Verified for station use)",
+    "cross_examination": "Compare against prior reviews, canon baselines, G_exp of acts"
+  },
+  "output": {
+    "verified_dir": "verified",
+    "logs_dir": "logs",
+    "promotion_rule": "Only after human checkpoint. Move from quarantine to verified/ for station-identification inner shell or builder handoff."
+  },
+  "force_multiplier": "MSS shell + standard review config = safe (quarantined, bias-free per Gödel-inspired limits), effective (delineates core subject from claims/equivocation), robust pipeline enabler. Ties to E_shield, G_exp measurement of scrutiny acts, bunny (o.p-) marking for MSS-verified items in station docs.",
+  "integration": "Called from station-identification review_protocol for high-value items. Outputs feed mss-shell/verified/ for 'inner shell' storage of verified formulas. Can wrap limited review runs or builder critical code execution."
+}

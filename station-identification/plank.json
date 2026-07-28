@@ -1,0 +1,349 @@
+{
+  "tasks": [
+    {
+      "id": "task_20260612_115630",
+      "title": "Station review step: inventory + signals for example theory",
+      "description": "",
+      "value_score": 0.0,
+      "continuity_weight": 0.9,
+      "status": "queued",
+      "bilateral_a": "Station review step: inventory + signals for example theory",
+      "bilateral_b": "Preserve continuity and accuracy in execution",
+      "created": "2026-06-12T11:56:30.430910"
+    },
+    {
+      "id": "task_20260612_115630",
+      "title": "Ambiguous resonance in cross-repo hyperlink assignment for master_inde",
+      "description": "Ambiguous resonance in cross-repo hyperlink assignment for master_index",
+      "value_score": 0.8565,
+      "continuity_weight": 0.8,
+      "status": "queued",
+      "bilateral_a": "Ambiguous resonance in cross-repo hyperlink assignment for master_index",
+      "bilateral_b": "EML-gated from station_master | Prioritize continuity and accuracy in execution",
+      "created": "2026-06-12T11:56:30.443012"
+    },
+    {
+      "id": "task_20260612_115631",
+      "title": "Station review start: The-Spiral-Codex",
+      "description": "context=plank-shoes integration checkpoint",
+      "value_score": 0.0,
+      "continuity_weight": 0.88,
+      "status": "queued",
+      "bilateral_a": "context=plank-shoes integration checkpoint",
+      "bilateral_b": "Preserve continuity and accuracy in execution",
+      "created": "2026-06-12T11:56:31.832616"
+    },
+    {
+      "id": "task_20260612_115631",
+      "title": "Inventory + signals scan",
+      "description": "",
+      "value_score": 0.0,
+      "continuity_weight": 0.5,
+      "status": "queued",
+      "bilateral_a": "Inventory + signals scan",
+      "bilateral_b": "Preserve thread for master_index + future .srec coils + hyperlinks",
+      "created": "2026-06-12T11:56:31.838936"
+    },
+    {
+      "id": "task_20260612_121321",
+      "title": "Station review step: inventory + signals for example theory",
+      "description": "",
+      "value_score": 0.0,
+      "continuity_weight": 0.9,
+      "status": "queued",
+      "bilateral_a": "Station review step: inventory + signals for example theory",
+      "bilateral_b": "Preserve continuity and accuracy in execution",
+      "created": "2026-06-12T12:13:21.810041"
+    },
+    {
+      "id": "task_20260612_121321",
+      "title": "Ambiguous resonance in cross-repo hyperlink assignment for master_inde",
+      "description": "Ambiguous resonance in cross-repo hyperlink assignment for master_index",
+      "value_score": 0.8565,
+      "continuity_weight": 0.8,
+      "status": "queued",
+      "bilateral_a": "Ambiguous resonance in cross-repo hyperlink assignment for master_index",
+      "bilateral_b": "EML-gated from station_master | Prioritize continuity and accuracy in execution",
+      "created": "2026-06-12T12:13:21.824544"
+    },
+    {
+      "id": "task_20260612_121322",
+      "title": "Station review start: The-Spiral-Codex",
+      "description": "context=deeper integration testing phase",
+      "value_score": 0.0,
+      "continuity_weight": 0.88,
+      "status": "queued",
+      "bilateral_a": "context=deeper integration testing phase",
+      "bilateral_b": "Preserve continuity and accuracy in execution",
+      "created": "2026-06-12T12:13:22.387558"
+    },
+    {
+      "id": "task_20260612_121322",
+      "title": "Inventory + signals scan",
+      "description": "",
+      "value_score": 0.0,
+      "continuity_weight": 0.5,
+      "status": "queued",
+      "bilateral_a": "Inventory + signals scan",
+      "bilateral_b": "Preserve thread for master_index + future .srec coils + hyperlinks",
+      "created": "2026-06-12T12:13:22.394360"
+    },
+    {
+      "id": "task_20260612_121418",
+      "title": "Station review step: inventory + signals for example theory",
+      "description": "",
+      "value_score": 0.0,
+      "continuity_weight": 0.9,
+      "status": "queued",
+      "bilateral_a": "Station review step: inventory + signals for example theory",
+      "bilateral_b": "Preserve continuity and accuracy in execution",
+      "created": "2026-06-12T12:14:18.149760"
+    },
+    {
+      "id": "task_20260612_121418",
+      "title": "Ambiguous resonance in cross-repo hyperlink assignment for master_inde",
+      "description": "Ambiguous resonance in cross-repo hyperlink assignment for master_index",
+      "value_score": 0.8565,
+      "continuity_weight": 0.8,
+      "status": "queued",
+      "bilateral_a": "Ambiguous resonance in cross-repo hyperlink assignment for master_index",
+      "bilateral_b": "EML-gated from station_master | Prioritize continuity and accuracy in execution",
+      "created": "2026-06-12T12:14:18.163536"
+    },
+    {
+      "id": "task_20260612_121418",
+      "title": "Station review pass on example-theory-or-repo-or-packet",
+      "description": "Full protocol execution in context: theory pass diagnosis",
+      "value_score": 0.92,
+      "continuity_weight": 0.85,
+      "status": "queued",
+      "bilateral_a": "Full protocol execution in context: theory pass diagnosis",
+      "bilateral_b": "Preserve review thread + cross-repo mycelial links + .srec relay",
+      "created": "2026-06-12T12:14:18.171062"
+    },
+    {
+      "id": "task_20260612_121418",
+      "title": "Station review start: The-Spiral-Codex",
+      "description": "context=codified roles testing polishing phase",
+      "value_score": 0.0,
+      "continuity_weight": 0.88,
+      "status": "queued",
+      "bilateral_a": "context=codified roles testing polishing phase",
+      "bilateral_b": "Preserve continuity and accuracy in execution",
+      "created": "2026-06-12T12:14:18.778510"
+    },
+    {
+      "id": "task_20260612_121418",
+      "title": "Inventory + signals scan",
+      "description": "",
+      "value_score": 0.0,
+      "continuity_weight": 0.5,
+      "status": "queued",
+      "bilateral_a": "Inventory + signals scan",
+      "bilateral_b": "Preserve thread for master_index + future .srec coils + hyperlinks",
+      "created": "2026-06-12T12:14:18.785753"
+    },
+    {
+      "id": "task_20260612_121418",
+      "title": "Station review pass on The-Spiral-Codex",
+      "description": "Full protocol execution in context: theory pass diagnosis",
+      "value_score": 0.92,
+      "continuity_weight": 0.85,
+      "status": "queued",
+      "bilateral_a": "Full protocol execution in context: theory pass diagnosis",
+      "bilateral_b": "Preserve review thread + cross-repo mycelial links + .srec relay",
+      "created": "2026-06-12T12:14:18.794425"
+    },
+    {
+      "id": "task_20260612_132830",
+      "title": "Station review start: The-Spiral-Codex",
+      "description": "context=Comprehensive R&D phase review: Plank scribe-informer, bunny customizations/animations, Ruffle/Rust toys, second terminal, new phase doc",
+      "value_score": 0.0,
+      "continuity_weight": 0.88,
+      "status": "queued",
+      "bilateral_a": "context=Comprehensive R&D phase review: Plank scribe-informer, bunny customizations/animations, Ruffle/Rust toys, second terminal, new phase doc",
+      "bilateral_b": "Preserve continuity and accuracy in execution",
+      "created": "2026-06-12T13:28:30.815682"
+    },
+    {
+      "id": "task_20260612_132830",
+      "title": "Inventory + signals scan",
+      "description": "",
+      "value_score": 0.0,
+      "continuity_weight": 0.5,
+      "status": "queued",
+      "bilateral_a": "Inventory + signals scan",
+      "bilateral_b": "Preserve thread for master_index + future .srec coils + hyperlinks",
+      "created": "2026-06-12T13:28:30.823184"
+    },
+    {
+      "id": "task_20260612_132830",
+      "title": "Station review pass on The-Spiral-Codex",
+      "description": "Full protocol execution in context: theory pass diagnosis",
+      "value_score": 0.92,
+      "continuity_weight": 0.85,
+      "status": "queued",
+      "bilateral_a": "Full protocol execution in context: theory pass diagnosis",
+      "bilateral_b": "Preserve review thread + cross-repo mycelial links + .srec relay",
+      "created": "2026-06-12T13:28:30.831676"
+    }
+  ],
+  "to_think": [
+    {
+      "id": "think_20260612_115630",
+      "question": "How to best parse this pass into a reusable Discipline package for future theory reviews?",
+      "related_to": "plank_diagnosis",
+      "created": "2026-06-12T11:56:30.436963"
+    },
+    {
+      "id": "think_20260612_121321",
+      "question": "How to best parse this pass into a reusable Discipline package for future theory reviews?",
+      "related_to": "plank_diagnosis",
+      "created": "2026-06-12T12:13:21.817882"
+    },
+    {
+      "id": "think_20260612_121418",
+      "question": "How to best parse this pass into a reusable Discipline package for future theory reviews?",
+      "related_to": "plank_diagnosis",
+      "created": "2026-06-12T12:14:18.156561"
+    }
+  ],
+  "log": [
+    {
+      "timestamp": "2026-06-12T11:56:30.430915",
+      "action": "task_added",
+      "title": "Station review step: inventory + signals for example theory",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T11:56:30.436970",
+      "action": "to_think_added",
+      "question": "How to best parse this pass into a reusable Discipline package for future theory reviews?"
+    },
+    {
+      "timestamp": "2026-06-12T11:56:30.443019",
+      "action": "task_added",
+      "title": "Ambiguous resonance in cross-repo hyperlink assignment for master_inde",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T11:56:31.832622",
+      "action": "task_added",
+      "title": "Station review start: The-Spiral-Codex",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T11:56:31.838942",
+      "action": "task_added",
+      "title": "Inventory + signals scan",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T12:13:21.810046",
+      "action": "task_added",
+      "title": "Station review step: inventory + signals for example theory",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T12:13:21.817888",
+      "action": "to_think_added",
+      "question": "How to best parse this pass into a reusable Discipline package for future theory reviews?"
+    },
+    {
+      "timestamp": "2026-06-12T12:13:21.824551",
+      "action": "task_added",
+      "title": "Ambiguous resonance in cross-repo hyperlink assignment for master_inde",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T12:13:22.387563",
+      "action": "task_added",
+      "title": "Station review start: The-Spiral-Codex",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T12:13:22.394367",
+      "action": "task_added",
+      "title": "Inventory + signals scan",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T12:14:18.149767",
+      "action": "task_added",
+      "title": "Station review step: inventory + signals for example theory",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T12:14:18.156567",
+      "action": "to_think_added",
+      "question": "How to best parse this pass into a reusable Discipline package for future theory reviews?"
+    },
+    {
+      "timestamp": "2026-06-12T12:14:18.163543",
+      "action": "task_added",
+      "title": "Ambiguous resonance in cross-repo hyperlink assignment for master_inde",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T12:14:18.171067",
+      "action": "task_added",
+      "title": "Station review pass on example-theory-or-repo-or-packet",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T12:14:18.778516",
+      "action": "task_added",
+      "title": "Station review start: The-Spiral-Codex",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T12:14:18.785760",
+      "action": "task_added",
+      "title": "Inventory + signals scan",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T12:14:18.794430",
+      "action": "task_added",
+      "title": "Station review pass on The-Spiral-Codex",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T13:28:30.815687",
+      "action": "task_added",
+      "title": "Station review start: The-Spiral-Codex",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T13:28:30.823191",
+      "action": "task_added",
+      "title": "Inventory + signals scan",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T13:28:30.831680",
+      "action": "task_added",
+      "title": "Station review pass on The-Spiral-Codex",
+      "continuity_focus": true
+    }
+  ],
+  "queue": [
+    "task_20260612_115630",
+    "task_20260612_115630",
+    "task_20260612_115631",
+    "task_20260612_115631",
+    "task_20260612_121321",
+    "task_20260612_121321",
+    "task_20260612_121322",
+    "task_20260612_121322",
+    "task_20260612_121418",
+    "task_20260612_121418",
+    "task_20260612_121418",
+    "task_20260612_121418",
+    "task_20260612_121418",
+    "task_20260612_121418",
+    "task_20260612_132830",
+    "task_20260612_132830",
+    "task_20260612_132830"
+  ]
+}

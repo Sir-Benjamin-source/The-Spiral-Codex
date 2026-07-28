@@ -1,0 +1,11 @@
+Key free core files (located in canon/benchmarks/internal/ or canon/benchmarks/ for direct use and extension):
+- test_runner.py
+- benchmark_associator.py
+- codified.py
+- builder_handoff.py
+- multi_test_sectioner.py
+- collab_agent_config.py
+- agentbench_config.py
+- osworld_config.py
+- associational-testing-methodology.md
+- encryption_guidance.md

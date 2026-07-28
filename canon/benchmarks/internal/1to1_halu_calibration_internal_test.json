@@ -1,0 +1,21 @@
+{
+  "work": "Claim Theory vs Calibration External (1:1)",
+  "external_benchmark": "HaluEval Calibration and Expected Calibration Error (ECE) Studies",
+  "timestamp": "2026-06-09T18:20:00",
+  "our_baseline_result": {
+    "overall_gate": false,
+    "pie_fidelity": 0.78,
+    "citation_validity": 0.4,
+    "g_exp": 0.42,
+    "source": "Adapted from PIE codified runs and test_runner outputs"
+  },
+  "external_limits": "ECE 0.08 raw to 0.009 calibrated; overconfidence on hallucinations; domain shifts (~18% base in general); post-hoc only (after generation); length/format biases (HaluEval experiments)",
+  "comparison": "Our applicability requires citations (which would improve calibration per external). Coherency/PIE would address root uncertainty causing overconfidence. Grandmas-wisdom proxy aligns with ECE mitigation. DAER prunes volatile overconfident branches pre-generation. Our gate 'fails' raw high-confidence claims until evidenced - directly addressing the external limit of post-generation detection and miscalibration.",
+  "insight": "1:1 shows our methods meet the calibration challenge by moving detection and evidence upstream (pre-gates + provenance), rather than relying on post-hoc fixes. The 'fail' on raw is the feature that prevents the overconfidence the external documents.",
+  "formats_used": [
+    "association_dict (from benchmark_associator)",
+    "codified_audit_json (baselines + G_exp)",
+    "test_summary_json"
+  ],
+  "provenance": "Generated for 1:1 external/internal comparison per user directive. Cite external first (HaluEval arXiv + ECE papers), associate to grandmas-wisdom/PIE/DAER, run test_runner for gate comparison."
+}

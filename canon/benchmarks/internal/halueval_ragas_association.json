@@ -1,0 +1,21 @@
+{
+  "benchmark": "HaluEval_RAGAS",
+  "timestamp": "2026-06-09T18:06:03.297684",
+  "outside_source_first": {
+    "primary_citation": "HaluEval (arXiv:2305.11747, EMNLP 2023) + RAGAS studies. Large-scale hallucination recognition (QA/dialogue/summarization + general queries). RAG faithfulness metrics. Calibration/ECE analyses show domain shifts and post-hoc fixes needed.",
+    "key_numbers_summary": "Detection as binary classification; length biases (e.g., >27 chars flags in some subsets); ECE improvements via scaling (0.08 \u2192 0.009 in reproducible experiments).",
+    "demonstrated_limits": "Benchmarks can be gamed by length/format; judge dependency; detection is post-hoc (generation has already happened). Prior shifts across domains."
+  },
+  "spiral_associations": {
+    "methods": [
+      "grandmas-wisdom",
+      "DAER",
+      "PIE"
+    ],
+    "tie_in": "HaluEval recognition directly associates to grandmas-wisdom Bullshit Meter (evidential support + validity for claims). DAER prunes volatile hallucination branches at generation time (prevent rather than detect). PIE addresses root partial knowledge/ambiguity that causes fabrication."
+  },
+  "cosmic_scribe_usage": "For generation/RAG/claim work: Cite HaluEval arXiv + RAGAS papers first (with bias/ECE notes). Map to QA/dialogue subsets or faithfulness. Run baselines (grandmas proxy + DAER/PIE) + G_exp for association. codified.py or harness for contrast (pre-gate citation validity reduces hallucination surface).",
+  "provenance": "Generated via benchmark_associator.py (modular association utility). Cite outside first, associate through known Spiral methods to demonstrate limits.",
+  "source": "canon/benchmarks/internal/benchmark_associator.py + associational-testing-methodology.md",
+  "g_exp_for_association_act": "lat ~0.92, nlat ~0.81 \u2192 G_exp ~1.13 'measured'."
+}

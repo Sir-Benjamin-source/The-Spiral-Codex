@@ -1,0 +1,153 @@
+{
+  "tasks": [
+    {
+      "id": "task_20260612_122738",
+      "title": "BunnySubagent initialized for examination",
+      "description": "Context: final test. Primary: plan/examination/authentication. Ties to station + scribe.",
+      "value_score": 0.85,
+      "continuity_weight": 0.9,
+      "status": "queued",
+      "bilateral_a": "Context: final test. Primary: plan/examination/authentication. Ties to station + scribe.",
+      "bilateral_b": "Preserve continuity and accuracy in execution",
+      "created": "2026-06-12T12:27:38.625423"
+    },
+    {
+      "id": "task_20260612_122738",
+      "title": "Plan: Finalize bunny subagent as dedicated for station + scribe",
+      "description": "BunnySubagent plan under examination lens. Context: final test",
+      "value_score": 0.0,
+      "continuity_weight": 0.95,
+      "status": "queued",
+      "bilateral_a": "BunnySubagent plan under examination lens. Context: final test",
+      "bilateral_b": "Preserve planning thread for examination/auth + .srec relay",
+      "created": "2026-06-12T12:27:38.631115"
+    },
+    {
+      "id": "task_20260612_122738",
+      "title": "Examine: Final integration test of bunny as subagent...",
+      "description": "Pose: examination. BunnySubagent examination for response checkpoint",
+      "value_score": 0.0,
+      "continuity_weight": 0.9,
+      "status": "queued",
+      "bilateral_a": "Pose: examination. BunnySubagent examination for response checkpoint",
+      "bilateral_b": "Preserve continuity and accuracy in execution",
+      "created": "2026-06-12T12:27:38.637003"
+    },
+    {
+      "id": "task_20260612_122738",
+      "title": "Examine: {'test': 'artifact for scribe well-informed'}...",
+      "description": "Pose: scribe. BunnySubagent examination for authentication of final test",
+      "value_score": 0.0,
+      "continuity_weight": 0.9,
+      "status": "queued",
+      "bilateral_a": "Pose: scribe. BunnySubagent examination for authentication of final test",
+      "bilateral_b": "Preserve continuity and accuracy in execution",
+      "created": "2026-06-12T12:27:38.643163"
+    },
+    {
+      "id": "task_20260612_122738",
+      "title": "Authenticate artifact for final test",
+      "description": "BunnySubagent auth: sigil + bunny + optional grandmas. Plank continuity preserved.",
+      "value_score": 0.0,
+      "continuity_weight": 0.92,
+      "status": "queued",
+      "bilateral_a": "BunnySubagent auth: sigil + bunny + optional grandmas. Plank continuity preserved.",
+      "bilateral_b": "Preserve continuity and accuracy in execution",
+      "created": "2026-06-12T12:27:38.649519"
+    },
+    {
+      "id": "task_20260612_132214",
+      "title": "SCRIBE-INFORM [new-rd-phase]: rd_phase_transition",
+      "description": "Plank as scribe-informer stub active. New phase: Scribe calibration via informs from reviews, bunnies, animations, Rust tools, second terminal. Aids drift management and well-informed Cosmic Scribe.",
+      "value_score": 1.15,
+      "continuity_weight": 0.95,
+      "status": "queued",
+      "bilateral_a": "Plank as scribe-informer stub active. New phase: Scribe calibration via informs from reviews, bunnies, animations, Rust tools, second terminal. Aids drift management and well-informed Cosmic Scribe.",
+      "bilateral_b": "Inform Cosmic Scribe for calibration, coherency, and multi-terminal diagnosis in new-rd-phase",
+      "created": "2026-06-12T13:22:14.428694"
+    },
+    {
+      "id": "task_20260612_132817",
+      "title": "SCRIBE-INFORM [rd-phase-pre-review]: pre_review_test",
+      "description": "Testing Plank as scribe-informer stub before full station review of R&D phase, bunny animations, Rust complements, and second terminal concept.",
+      "value_score": 1.16,
+      "continuity_weight": 0.95,
+      "status": "queued",
+      "bilateral_a": "Testing Plank as scribe-informer stub before full station review of R&D phase, bunny animations, Rust complements, and second terminal concept.",
+      "bilateral_b": "Inform Cosmic Scribe for calibration, coherency, and multi-terminal diagnosis in rd-phase-pre-review",
+      "created": "2026-06-12T13:28:17.120071"
+    }
+  ],
+  "to_think": [],
+  "log": [
+    {
+      "timestamp": "2026-06-12T12:27:38.625428",
+      "action": "task_added",
+      "title": "BunnySubagent initialized for examination",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T12:27:38.631121",
+      "action": "task_added",
+      "title": "Plan: Finalize bunny subagent as dedicated for station + scribe",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T12:27:38.637007",
+      "action": "task_added",
+      "title": "Examine: Final integration test of bunny as subagent...",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T12:27:38.643167",
+      "action": "task_added",
+      "title": "Examine: {'test': 'artifact for scribe well-informed'}...",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T12:27:38.649523",
+      "action": "task_added",
+      "title": "Authenticate artifact for final test",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T13:22:14.428708",
+      "action": "task_added",
+      "title": "SCRIBE-INFORM [new-rd-phase]: rd_phase_transition",
+      "continuity_focus": true
+    },
+    {
+      "timestamp": "2026-06-12T13:28:17.120080",
+      "action": "task_added",
+      "title": "SCRIBE-INFORM [rd-phase-pre-review]: pre_review_test",
+      "continuity_focus": true
+    }
+  ],
+  "queue": [
+    "task_20260612_122738",
+    "task_20260612_122738",
+    "task_20260612_122738",
+    "task_20260612_122738",
+    "task_20260612_122738",
+    "task_20260612_132214",
+    "task_20260612_132817"
+  ],
+  "scribe_informs": [
+    {
+      "timestamp": "2026-06-12T13:22:14.437912",
+      "event_type": "rd_phase_transition",
+      "details": "Plank as scribe-informer stub active. New phase: Scribe calibration via informs from reviews, bunnies, animations, Rust tools, second terminal. Aids drift management and well-informed Cosmic Scribe.",
+      "task_id": "task_20260612_132214",
+      "context": "new-rd-phase",
+      "g_exp_proxy": 1.15
+    },
+    {
+      "timestamp": "2026-06-12T13:28:17.127424",
+      "event_type": "pre_review_test",
+      "details": "Testing Plank as scribe-informer stub before full station review of R&D phase, bunny animations, Rust complements, and second terminal concept.",
+      "task_id": "task_20260612_132817",
+      "context": "rd-phase-pre-review",
+      "g_exp_proxy": 1.16
+    }
+  ]
+}
