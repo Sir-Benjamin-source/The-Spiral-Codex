@@ -43,21 +43,44 @@ templates:
     default_marker: "(·_·)"
     continuity_role: "list_surface"
 
+  data-table:
+    file: "templates/data-table.html"
+    purpose: "sortable filterable tabular view"
+    best_for:
+      - spreadsheet-shaped data
+      - multi-column review
+      - CSV / JSON row presentation
+    default_marker: "(·_·)"
+    continuity_role: "data_view"
+
+  simple-chart:
+    file: "templates/simple-chart.html"
+    purpose: "category + numeric bar overview"
+    best_for:
+      - quick visual totals
+      - category breakdowns
+      - no-dependency charts
+    default_marker: "(^_^)"
+    continuity_role: "data_view"
+
 # Purpose → suggested template (reverse lookup)
 purpose_map:
   capture_input: simple-form
   status_select: marker-board
   make_decision: decision-board
   track_items: quick-ledger
+  show_table: data-table
+  show_chart: simple-chart
+  spreadsheet_view: data-table
 
 # Marker → typical studio use
 marker_chains:
   "(·_·)":
     meaning: "Quiet / routine"
-    often_with: [simple-form, quick-ledger]
+    often_with: [simple-form, quick-ledger, data-table]
   "(^_^)":
     meaning: "Clean / anchors held"
-    often_with: [decision-board]
+    often_with: [decision-board, simple-chart]
   "(o.p)":
     meaning: "Notable / examination"
     often_with: [marker-board]
@@ -78,3 +101,5 @@ continuity_roles:
     records: ["choice", "question text"]
   list_surface:
     records: ["item count", "last item", "markers used"]
+  data_view:
+    records: ["row count", "columns shown", "chart type if any"]
