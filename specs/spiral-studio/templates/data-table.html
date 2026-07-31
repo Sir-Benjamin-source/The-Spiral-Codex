@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Table — Spiral Studio</title>
+  <style>
+    :root {
+      --bg: #0f1419; --surface: #1a2332; --text: #e7ecf3; --muted: #8b9bb4;
+      --accent: #3d9cf0; --accent-soft: rgba(61,156,240,0.15); --radius: 10px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg); color: var(--text); padding: 1.5rem;
+    }
+    h1 { margin: 0 0 0.25rem; font-size: 1.25rem; }
+    .sub { margin: 0 0 1rem; color: var(--muted); font-size: 0.9rem; }
+    .toolbar {
+      display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; align-items: center;
+    }
+    .toolbar input, .toolbar select {
+      padding: 0.5rem 0.65rem; border: 1px solid #2a3548; border-radius: 8px;
+      background: #121a24; color: var(--text); font: inherit;
+    }
+    .toolbar input:focus, .toolbar select:focus {
+      outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft);
+    }
+    table {
+      width: 100%; max-width: 800px; border-collapse: collapse;
+      background: var(--surface); border-radius: var(--radius); overflow: hidden;
+    }
+    th, td {
+      text-align: left; padding: 0.65rem 0.85rem; border-bottom: 1px solid #2a3548;
+      font-size: 0.9rem;
+    }
+    th {
+      color: var(--muted); font-weight: 500; cursor: pointer; user-select: none;
+    }
+    th:hover { color: var(--accent); }
+    tr:last-child td { border-bottom: none; }
+    .num { text-align: right; font-variant-numeric: tabular-nums; }
+    .meta { margin-top: 0.75rem; color: var(--muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <h1>Data Table</h1>
+  <p class="sub">Spiral Studio — sortable, filterable table (spreadsheet-style view)</p>
+
+  <div class="toolbar">
+    <input id="filter" type="search" placeholder="Filter…" />
+    <select id="sortCol">
+      <option value="0">Sort: Label</option>
+      <option value="1">Sort: Value</option>
+      <option value="2">Sort: Category</option>
+    </select>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th data-col="0">Label</th><th data-col="1">Value</th><th data-col="2">Category</th></tr>
+    </thead>
+    <tbody id="body"></tbody>
+  </table>
+  <div class="meta" id="meta"></div>
+
+  <script>
+    // Sample rows — replace or inject real data as needed
+    let rows = [
+      { label: 'Amazon', value: 47.83, category: 'Business' },
+      { label: 'Adobe', value: 54.99, category: 'Business' },
+      { label: 'Uber', value: 18.40, category: 'Business' },
+      { label: 'Blue Bottle', value: 6.75, category: 'Personal' },
+      { label: 'Unknown Vendor', value: 129.00, category: 'Review' }
+    ];
+
+    const body = document.getElementById('body');
+    const filterEl = document.getElementById('filter');
+    const sortCol = document.getElementById('sortCol');
+    const meta = document.getElementById('meta');
+    let sortDir = 1;
+
+    function render() {
+      const q = filterEl.value.trim().toLowerCase();
+      let data = rows.filter(r =>
+        !q || r.label.toLowerCase().includes(q) ||
+        r.category.toLowerCase().includes(q) ||
+        String(r.value).includes(q)
+      );
+      const col = +sortCol.value;
+      const key = ['label', 'value', 'category'][col];
+      data = [...data].sort((a, b) => {
+        const av = a[key], bv = b[key];
+        if (typeof av === 'number') return (av - bv) * sortDir;
+        return String(av).localeCompare(String(bv)) * sortDir;
+      });
+      body.innerHTML = data.map(r =>
+        `<tr><td>${r.label}</td><td class="num">${r.value.toFixed(2)}</td><td>${r.category}</td></tr>`
+      ).join('');
+      meta.textContent = `${data.length} row(s)` + (q ? ` matching “${q}”` : '');
+    }
+
+    filterEl.addEventListener('input', render);
+    sortCol.addEventListener('change', () => { sortDir = 1; render(); });
+    document.querySelectorAll('th').forEach(th => {
+      th.addEventListener('click', () => {
+        const col = th.dataset.col;
+        if (sortCol.value === col) sortDir *= -1;
+        else { sortCol.value = col; sortDir = 1; }
+        render();
+      });
+    });
+    render();
+  </script>
+</body>
+</html>
