@@ -1,0 +1,80 @@
+# Spiral Studio — Association Chain Mapping
+# Links templates, purposes, markers, and continuity roles for easy agent lookup.
+
+# Template → primary purpose
+templates:
+  simple-form:
+    file: "templates/simple-form.html"
+    purpose: "capture structured input"
+    best_for:
+      - quick data entry
+      - note + name capture
+      - lightweight forms
+    default_marker: "(·_·)"
+    continuity_role: "input_capture"
+
+  marker-board:
+    file: "templates/marker-board.html"
+    purpose: "select qualitative status"
+    best_for:
+      - status selection
+      - visual marker choice
+      - Rivet-style signaling
+    default_marker: "(o.p)"
+    continuity_role: "status_signal"
+
+  decision-board:
+    file: "templates/decision-board.html"
+    purpose: "record a discrete choice"
+    best_for:
+      - yes/no/defer decisions
+      - gated approvals
+      - lightweight governance
+    default_marker: "(^_^)"
+    continuity_role: "decision_record"
+
+  quick-ledger:
+    file: "templates/quick-ledger.html"
+    purpose: "running list with light markers"
+    best_for:
+      - ad-hoc lists
+      - temporary ledgers
+      - item tracking
+    default_marker: "(·_·)"
+    continuity_role: "list_surface"
+
+# Purpose → suggested template (reverse lookup)
+purpose_map:
+  capture_input: simple-form
+  status_select: marker-board
+  make_decision: decision-board
+  track_items: quick-ledger
+
+# Marker → typical studio use
+marker_chains:
+  "(·_·)":
+    meaning: "Quiet / routine"
+    often_with: [simple-form, quick-ledger]
+  "(^_^)":
+    meaning: "Clean / anchors held"
+    often_with: [decision-board]
+  "(o.p)":
+    meaning: "Notable / examination"
+    often_with: [marker-board]
+  "(>_<)":
+    meaning: "Drift / incomplete"
+    often_with: [marker-board, quick-ledger]
+  "(· ·)":
+    meaning: "Waiting / background"
+    often_with: [marker-board]
+
+# Continuity role → what gets recorded
+continuity_roles:
+  input_capture:
+    records: ["fields submitted", "timestamp"]
+  status_signal:
+    records: ["selected marker", "label"]
+  decision_record:
+    records: ["choice", "question text"]
+  list_surface:
+    records: ["item count", "last item", "markers used"]
