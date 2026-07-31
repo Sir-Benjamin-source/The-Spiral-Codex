@@ -80,15 +80,18 @@ The foundation expects the host agent to be able to do at least one of the follo
 - Serve the files locally and provide a reachable URL / file path the user can open, **or**
 - Hand the primary HTML file to an existing preview mechanism the agent already controls.
 
-The methodology itself does not hard-code a single runtime. It emits clean artifacts and asks the agent to use the best available presentation path. Environments that already host HTML (e.g. certain Claude sessions) simply use that path; environments that lack one can fall back to local serve or file hand-off.
+The methodology itself does not hard-code a single runtime. It emits clean artifacts and asks the agent to use the best available presentation path. Environments that already host HTML simply use that path; environments that lack one can fall back to local serve or file hand-off.
+
+**Optional local path:** Spiral-Forge’s lightweight mock-server pattern (`api/mock_server.py`) is a useful reference if we later need a minimal local preview/serve helper. It is not required for the foundation and is not duplicated here.
 
 ---
 
 ## Relation to Existing Spiral Pieces
 
-- **Spiral-Builder / ASCII Compiler** — reuse the multi-format emission + provenance habits. Studio extends the “functional output” role toward interactive surfaces instead of spreadsheets or pure utilities.
+- **Spiral-Builder / ASCII Compiler** — reuse multi-format emission + provenance habits. Studio extends the “functional output” role toward interactive surfaces.
+- **Spiral-Forge** — shares the philosophy of human oversight and approval checkpoints; its mock-server pattern is an optional presentation reference only. No functional duplication.
 - **Spiral-Session-Manager / Continuity Coil** — surfaces can optionally be noted in continuity records so they remain findable across turns.
-- **The Spiral Codex** — this foundation lives here as the coordinating spec; implementation details may later sit in Builder or a dedicated studio module.
+- **The Spiral Codex** — this foundation lives here as the coordinating spec.
 
 ---
 
@@ -104,7 +107,7 @@ The methodology itself does not hard-code a single runtime. It emits clean artif
 ## Next Internal Steps
 
 1. Keep this spec living and refine as we use it.
-2. Prototype a small set of surface templates (form, simple dashboard, visual organizer).
+2. Grow a small set of practical surface templates.
 3. Decide where the first concrete implementation code should live (Builder extension vs. new lightweight module).
 4. Only after internal use feels solid, extract a public Spiral Studio skill.
 
