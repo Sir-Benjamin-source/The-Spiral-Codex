@@ -31,6 +31,10 @@ selection_heuristics:
     prefer: decision-board
   - when: "user needs a short running list"
     prefer: quick-ledger
+  - when: "user has tabular / spreadsheet-shaped data to review"
+    prefer: data-table
+  - when: "user wants a quick category + numeric visual overview"
+    prefer: simple-chart
   - when: "none of the above fit cleanly"
     prefer: articulate_new   # generate a fresh surface instead of forcing a template
 
