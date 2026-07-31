@@ -1,0 +1,37 @@
+# Spiral Studio — Core Configuration
+# Copy or extend as needed for session / environment overrides.
+
+studio:
+  name: "Spiral Studio"
+  version: "0.1.0-internal"
+  mode: "internal"          # internal | skill (future public extract)
+
+# Preferred articulation style
+articulation:
+  prefer_single_file: true  # inline CSS/JS when practical
+  allow_css: true
+  allow_js: true
+  max_bundle_files: 3       # index.html + style.css + script.js
+
+# Presentation preference order (first available wins)
+presentation:
+  order:
+    - session_preview       # native host HTML preview if available
+    - local_serve           # optional local helper (Forge mock-server pattern)
+    - file_handoff          # give user the file path / download
+  local_serve_port: 8765    # only if local_serve is used
+
+# Continuity / recording
+continuity:
+  record_studio_entry: true
+  entry_format: "markdown"  # markdown | json
+  link_to_coil: true        # note surface in Continuity Coil when active
+
+# Default marker set (shared with Continuity / Rivet)
+markers:
+  default:
+    "(·_·)": "Quiet / routine"
+    "(^_^)": "Clean / anchors held"
+    "(o.p)": "Notable / examination"
+    "(>_<)": "Drift / incomplete"
+    "(· ·)": "Waiting / background"
