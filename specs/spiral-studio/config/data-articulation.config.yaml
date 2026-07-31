@@ -1,0 +1,54 @@
+# Spiral Studio — Data Articulation Config
+# How structured data becomes tables, charts, and spreadsheet-friendly surfaces.
+
+data_articulation:
+  # Preferred output shapes when the agent is given tabular / numeric data
+  preferred_surfaces:
+    - data-table      # interactive sortable/filterable table
+    - simple-chart    # pure SVG bar overview
+    - quick-ledger    # lightweight running list
+
+  # Spreadsheet / CSV hooks
+  spreadsheet:
+    accept_formats: ["csv", "tsv", "json_rows"]
+    emit_formats: ["csv", "json_rows"]
+    # When presenting data that originated as a spreadsheet:
+    # 1. Parse to rows of objects
+    # 2. Offer data-table surface by default
+    # 3. Optionally offer simple-chart if 1–2 numeric columns dominate
+    default_presenter: data-table
+    chart_when:
+      numeric_columns_gte: 1
+      category_columns_gte: 1
+      max_categories_for_bar: 12
+
+  # Field mapping hints (agent can override)
+  field_roles:
+    label: ["label", "name", "vendor", "item", "title"]
+    value: ["value", "amount", "total", "count", "score"]
+    category: ["category", "classification", "type", "group"]
+    date: ["date", "timestamp", "when"]
+    marker: ["marker", "status", "face"]
+
+  # Chart defaults (simple-chart template)
+  chart:
+    type_default: "bar"
+    pure_svg: true          # no external chart libraries required
+    color_accent: "#3d9cf0"
+    show_legend: true
+
+  # Table defaults (data-table template)
+  table:
+    sortable: true
+    filterable: true
+    show_row_count: true
+    numeric_align: "right"
+
+# Association: data shape → suggested surface
+data_shape_map:
+  few_rows_few_cols: data-table
+  category_plus_numeric: simple-chart
+  running_items: quick-ledger
+  form_like_capture: simple-form
+  status_only: marker-board
+  discrete_choice: decision-board
