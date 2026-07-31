@@ -1,0 +1,42 @@
+# Spiral Studio — Operational Chains
+# Priority sequence and simple heuristics for template selection.
+
+# Core operational chain (mirrors foundation priority sequence)
+operational_chain:
+  - id: assess
+    action: "Decide if an interactive surface helps"
+    next: articulate
+  - id: articulate
+    action: "Generate or adapt HTML (+ optional CSS/JS)"
+    next: bundle
+  - id: bundle
+    action: "Single-file or small coherent set"
+    next: present
+  - id: present
+    action: "Hand to best available presentation path"
+    next: record
+  - id: record
+    action: "Optional light studio entry / coil note"
+    next: release
+  - id: release
+    action: "Return control to conversation"
+
+# Simple selection heuristics (agent can follow or override)
+selection_heuristics:
+  - when: "user needs to enter a few fields"
+    prefer: simple-form
+  - when: "user needs to pick a status or marker"
+    prefer: marker-board
+  - when: "user needs to make a yes/no/defer style choice"
+    prefer: decision-board
+  - when: "user needs a short running list"
+    prefer: quick-ledger
+  - when: "none of the above fit cleanly"
+    prefer: articulate_new   # generate a fresh surface instead of forcing a template
+
+# Association chain: how Studio links outward
+external_links:
+  continuity_coil: "optional note of surface in Continuity Coil / Rivet profile"
+  session_manager: "optional coil companion or studio-entry reference"
+  spiral_forge: "optional local_serve pattern only — not required"
+  spiral_builder: "multi-format emission habits reused where helpful"
