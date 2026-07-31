@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Form Surface — Spiral Studio</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a2332;
+      --text: #e7ecf3;
+      --muted: #8b9bb4;
+      --accent: #3d9cf0;
+      --accent-soft: rgba(61, 156, 240, 0.15);
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    }
+    h1 {
+      margin: 0 0 0.35rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .sub {
+      margin: 0 0 1.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.35rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    input, textarea, select {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.65rem 0.75rem;
+      border: 1px solid #2a3548;
+      border-radius: 8px;
+      background: #121a24;
+      color: var(--text);
+      font: inherit;
+    }
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-soft);
+    }
+    button {
+      width: 100%;
+      padding: 0.7rem 1rem;
+      border: none;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover { filter: brightness(1.08); }
+    .result {
+      margin-top: 1.25rem;
+      padding: 0.85rem;
+      border-radius: 8px;
+      background: #121a24;
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: none;
+    }
+    .result.show { display: block; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Simple Form</h1>
+    <p class="sub">Spiral Studio starter surface</p>
+
+    <form id="f">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" placeholder="Optional" />
+
+      <label for="note">Note</label>
+      <textarea id="note" name="note" rows="3" placeholder="What should we capture?"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="result" id="out"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('f');
+    const out = document.getElementById('out');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      out.textContent = 'Captured: ' + JSON.stringify(data, null, 2);
+      out.classList.add('show');
+    });
+  </script>
+</body>
+</html>
