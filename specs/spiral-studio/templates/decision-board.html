@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Decision Board — Spiral Studio</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a2332;
+      --text: #e7ecf3;
+      --muted: #8b9bb4;
+      --accent: #3d9cf0;
+      --accent-soft: rgba(61, 156, 240, 0.15);
+      --ok: #3ecf8e;
+      --warn: #e6b84d;
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 1.5rem;
+    }
+    h1 { margin: 0 0 0.25rem; font-size: 1.25rem; }
+    .sub { margin: 0 0 1.5rem; color: var(--muted); font-size: 0.9rem; }
+    .question {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+      max-width: 560px;
+    }
+    .question input {
+      width: 100%;
+      margin-top: 0.5rem;
+      padding: 0.65rem 0.75rem;
+      border: 1px solid #2a3548;
+      border-radius: 8px;
+      background: #121a24;
+      color: var(--text);
+      font: inherit;
+    }
+    .question input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-soft);
+    }
+    .choices {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.25rem;
+      max-width: 560px;
+    }
+    .choices button {
+      padding: 0.6rem 1.1rem;
+      border: 1px solid #2a3548;
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--text);
+      font: inherit;
+      cursor: pointer;
+    }
+    .choices button:hover { border-color: var(--accent); }
+    .choices button.selected {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+    .result {
+      max-width: 560px;
+      padding: 0.9rem 1.1rem;
+      border-radius: var(--radius);
+      background: var(--surface);
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: none;
+    }
+    .result.show { display: block; }
+    .result strong { color: var(--text); }
+  </style>
+</head>
+<body>
+  <h1>Decision Board</h1>
+  <p class="sub">Spiral Studio starter — capture a choice and optional note</p>
+
+  <div class="question">
+    <label for="q">What are we deciding?</label>
+    <input id="q" type="text" placeholder="e.g. Ship the receipt skill as-is?" />
+  </div>
+
+  <div class="choices" id="choices">
+    <button data-val="Yes">Yes</button>
+    <button data-val="No">No</button>
+    <button data-val="Defer">Defer</button>
+    <button data-val="Needs more info">Needs more info</button>
+  </div>
+
+  <div class="result" id="out"></div>
+
+  <script>
+    const q = document.getElementById('q');
+    const out = document.getElementById('out');
+    const buttons = document.querySelectorAll('#choices button');
+    let choice = null;
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        choice = btn.dataset.val;
+        const question = q.value.trim() || '(no question entered)';
+        out.innerHTML = `<strong>Decision:</strong> ${choice}<br><strong>On:</strong> ${question}`;
+        out.classList.add('show');
+      });
+    });
+  </script>
+</body>
+</html>
