@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quick Ledger — Spiral Studio</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a2332;
+      --text: #e7ecf3;
+      --muted: #8b9bb4;
+      --accent: #3d9cf0;
+      --accent-soft: rgba(61, 156, 240, 0.15);
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 1.5rem;
+    }
+    h1 { margin: 0 0 0.25rem; font-size: 1.25rem; }
+    .sub { margin: 0 0 1.25rem; color: var(--muted); font-size: 0.9rem; }
+    .add-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      max-width: 640px;
+    }
+    .add-row input {
+      flex: 1;
+      padding: 0.65rem 0.75rem;
+      border: 1px solid #2a3548;
+      border-radius: 8px;
+      background: #121a24;
+      color: var(--text);
+      font: inherit;
+    }
+    .add-row input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-soft);
+    }
+    .add-row button {
+      padding: 0.65rem 1rem;
+      border: none;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    table {
+      width: 100%;
+      max-width: 640px;
+      border-collapse: collapse;
+      background: var(--surface);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.7rem 0.9rem;
+      border-bottom: 1px solid #2a3548;
+      font-size: 0.9rem;
+    }
+    th { color: var(--muted); font-weight: 500; }
+    tr:last-child td { border-bottom: none; }
+    .empty {
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 1rem 0;
+    }
+    .remove {
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    .remove:hover { color: #e66; }
+  </style>
+</head>
+<body>
+  <h1>Quick Ledger</h1>
+  <p class="sub">Spiral Studio starter — running list with light markers</p>
+
+  <div class="add-row">
+    <input id="item" type="text" placeholder="Add item…" />
+    <button id="add">Add</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Item</th><th>Marker</th><th></th></tr>
+    </thead>
+    <tbody id="body"></tbody>
+  </table>
+  <div class="empty" id="empty">No entries yet.</div>
+
+  <script>
+    const markers = ['(·_·)', '(^_^)', '(o.p)', '(>_<)', '(· ·)'];
+    let rows = [];
+    const body = document.getElementById('body');
+    const empty = document.getElementById('empty');
+    const input = document.getElementById('item');
+
+    function render() {
+      body.innerHTML = '';
+      empty.style.display = rows.length ? 'none' : 'block';
+      rows.forEach((r, i) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${i + 1}</td>
+          <td>${r.text}</td>
+          <td>${r.marker}</td>
+          <td><button class="remove" data-i="${i}">remove</button></td>`;
+        body.appendChild(tr);
+      });
+      document.querySelectorAll('.remove').forEach(btn => {
+        btn.addEventListener('click', () => {
+          rows.splice(+btn.dataset.i, 1);
+          render();
+        });
+      });
+    }
+
+    function add() {
+      const text = input.value.trim();
+      if (!text) return;
+      rows.push({ text, marker: markers[rows.length % markers.length] });
+      input.value = '';
+      render();
+      input.focus();
+    }
+
+    document.getElementById('add').addEventListener('click', add);
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') add(); });
+    render();
+  </script>
+</body>
+</html>
