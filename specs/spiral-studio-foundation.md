@@ -1,6 +1,6 @@
 # Spiral Studio — Foundation Spec (Internal)
 
-**Status:** Living draft  
+**Status:** v0.1 internal — usable foundation  
 **Provenance:** Spiral Codex  
 **Date:** 2026-07-31  
 **Purpose:** Flexible foundation for articulating and presenting lightweight interactive surfaces (HTML + optional CSS + optional JS). Built first for internal Spiral use; later extractable as a public skill.
@@ -33,27 +33,12 @@ The agent remains the primary interface. Surfaces are instruments, not replaceme
 
 ## Priority Sequence
 
-1. **Assess**  
-   Does this task benefit from an interactive surface, or is conversation still better?
-
-2. **Articulate**  
-   Generate clean HTML.  
-   Add scoped CSS when visual structure or polish helps.  
-   Add JS only when interaction or light state is required.
-
-3. **Bundle**  
-   Prefer one of:
-   - Single self-contained `.html` (CSS/JS inlined), or
-   - Small set: `index.html` + `style.css` + `script.js` when separation is cleaner.
-
-4. **Present**  
-   Hand the artifact(s) to the available presentation path (see contract below).
-
-5. **Record lightly**  
-   Optional studio log entry: purpose, files produced, session/coil reference.
-
-6. **Release**  
-   Return control to the conversation as soon as the user is finished or redirects.
+1. **Assess** — Does this task benefit from an interactive surface?
+2. **Articulate** — Generate clean HTML; add CSS/JS only as needed.
+3. **Bundle** — Single-file preferred, or small coherent set.
+4. **Present** — Hand to best available presentation path.
+5. **Record lightly** — Optional studio entry / coil note.
+6. **Release** — Return control to the conversation.
 
 ---
 
@@ -61,55 +46,65 @@ The agent remains the primary interface. Surfaces are instruments, not replaceme
 
 ```
 studio/
-└── <short-slug>-<YYYYMMDD>/     # or session-tied folder
-    ├── index.html               # required
-    ├── style.css                # optional
-    ├── script.js                # optional
-    └── studio-entry.md          # optional light continuity note
+└── <short-slug>-<YYYYMMDD>/
+    ├── index.html          # required
+    ├── style.css           # optional
+    ├── script.js           # optional
+    └── studio-entry.md     # optional light continuity note
 ```
 
-Single-file mode is equally valid and often preferred for simple surfaces.
+Single-file mode is equally valid and often preferred.
 
 ---
 
 ## Presentation Contract (Minimal)
 
-The foundation expects the host agent to be able to do at least one of the following with the produced artifact(s):
+Host agent should support at least one of:
 
-- Render / preview interactive HTML inside the session, **or**
-- Serve the files locally and provide a reachable URL / file path the user can open, **or**
-- Hand the primary HTML file to an existing preview mechanism the agent already controls.
+- Session HTML preview, **or**
+- Local serve + reachable URL/path, **or**
+- File hand-off to an existing preview mechanism
 
-The methodology itself does not hard-code a single runtime. It emits clean artifacts and asks the agent to use the best available presentation path. Environments that already host HTML simply use that path; environments that lack one can fall back to local serve or file hand-off.
+Optional reference: Spiral-Forge `api/mock_server.py` pattern for a minimal local serve helper. Not required.
 
-**Optional local path:** Spiral-Forge’s lightweight mock-server pattern (`api/mock_server.py`) is a useful reference if we later need a minimal local preview/serve helper. It is not required for the foundation and is not duplicated here.
+---
+
+## What Exists (v0.1)
+
+Under `specs/spiral-studio/`:
+
+- **Templates:** simple-form, marker-board, decision-board, quick-ledger, data-table, simple-chart
+- **Config:** studio, associations, chains, data-articulation
+- **Examples:** usage-new-session.md
+
+See `specs/spiral-studio/README.md` for the live index.
 
 ---
 
 ## Relation to Existing Spiral Pieces
 
-- **Spiral-Builder / ASCII Compiler** — reuse multi-format emission + provenance habits. Studio extends the “functional output” role toward interactive surfaces.
-- **Spiral-Forge** — shares the philosophy of human oversight and approval checkpoints; its mock-server pattern is an optional presentation reference only. No functional duplication.
-- **Spiral-Session-Manager / Continuity Coil** — surfaces can optionally be noted in continuity records so they remain findable across turns.
-- **The Spiral Codex** — this foundation lives here as the coordinating spec.
+- **Spiral-Builder / ASCII Compiler** — multi-format emission + provenance habits
+- **Spiral-Forge** — human-oversight philosophy; optional local-serve reference only
+- **Session-Manager / Continuity Coil / Rivet** — optional continuity notes for surfaces
+- **The Spiral Codex** — coordinating home for this foundation
 
 ---
 
-## Out of Scope (for this foundation)
+## Out of Scope (this foundation)
 
-- Heavy frameworks or large dependency trees
-- Long-lived multi-page applications (unless explicitly requested)
+- Heavy frameworks / large dependency trees
+- Long-lived multi-page apps (unless explicitly requested)
 - Replacing the conversational interface
 - Complex backend services
 
 ---
 
-## Next Internal Steps
+## Next Steps (when resumed)
 
-1. Keep this spec living and refine as we use it.
-2. Grow a small set of practical surface templates.
-3. Decide where the first concrete implementation code should live (Builder extension vs. new lightweight module).
-4. Only after internal use feels solid, extract a public Spiral Studio skill.
+1. Use the templates in real sessions; refine from friction.
+2. Optionally add a minimal local preview helper if host environments need it.
+3. Decide implementation home (Builder extension vs. dedicated module).
+4. Only after internal use feels solid → extract a public Spiral Studio skill.
 
 ---
 
