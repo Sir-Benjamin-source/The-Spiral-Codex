@@ -19,7 +19,7 @@ A variable is not accepted into the parallel differential examination form (or a
 |----------|--------|--------|
 | Subject Isolation Strength | S | Locked (v0.1) |
 | Generality Expansion | G | Locked (v0.1) |
-| Etymological Descent | E | Draft pending |
+| Etymological Descent | E | Locked (v0.1) |
 | Instantaneous Coherence | C | Draft pending |
 | Dual Damping Rates | λ_A / λ_P | Draft pending |
 
@@ -34,4 +34,4 @@ Theory-level permanence lives here. Embodiment plumbing (loaders, calculators, i
 ---
 
 *Reality is the only authority. Everything else is hypothesis.*  
-∞ 🔂 🔁 🔄 ∞
+∞ 🜂 🜁 🜄 ∞
