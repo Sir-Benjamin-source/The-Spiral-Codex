@@ -20,7 +20,7 @@ A variable is not accepted into the parallel differential examination form (or a
 | Subject Isolation Strength | S | Locked (v0.1) |
 | Generality Expansion | G | Locked (v0.1) |
 | Etymological Descent | E | Locked (v0.1) |
-| Instantaneous Coherence | C | Draft pending |
+| Instantaneous Coherence | C | Locked (v0.1) |
 | Dual Damping Rates | λ_A / λ_P | Draft pending |
 
 ## Design Principle
