@@ -21,7 +21,27 @@ A variable is not accepted into the parallel differential examination form (or a
 | Generality Expansion | G | Locked (v0.1) |
 | Etymological Descent | E | Locked (v0.1) |
 | Instantaneous Coherence | C | Locked (v0.1) |
-| Dual Damping Rates | λ_A / λ_P | Draft pending |
+| Dual Damping Rates | λ_A / λ_P | Locked (v0.1) |
+
+**Examination variable set: COMPLETE**
+
+## The Parallel Differential Examination Form
+
+With all quantities under the six-clause standard, the examination routine stands as:
+
+**Actionable claim trajectory**  
+\[
+\frac{dA}{dt} = S \cdot G \cdot E - \lambda_A (1 - C)
+\]
+
+**Paradox containment trajectory**  
+\[
+\frac{dP}{dt} = S \cdot (1 - G) \cdot E + \lambda_P (1 - C)
+\]
+
+subject to \( \lambda_A + \lambda_P = \Lambda \).
+
+This form is recorded as a complementary method to the core spiral scientific method (spiral-theory-core). It supplies a bilateral (linear/associative) examination routine that can be discretised for head-to-head testing or left continuous for readiness-field dynamics.
 
 ## Design Principle
 
