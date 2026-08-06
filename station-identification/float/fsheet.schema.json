@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Sir-Benjamin-source/The-Spiral-Codex/station-identification/float/fsheet.schema.json",
+  "title": "Spiral .fsheet — Relational Master Record",
+  "description": "Durable passive master record of relational state across a body of related work. v0.1",
+  "type": "object",
+  "required": ["format", "format_version", "identity", "version_trail", "inventory", "designation_history", "coherence_notes", "state_changes"],
+  "properties": {
+    "format": { "const": "fsheet" },
+    "format_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+$" },
+    "identity": {
+      "type": "object",
+      "required": ["sigil", "bonded", "created", "context"],
+      "properties": {
+        "sigil": { "type": "string" },
+        "bonded": { "type": "string" },
+        "created": { "type": "string", "format": "date-time" },
+        "context": { "type": "string" }
+      }
+    },
+    "version_trail": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["version", "stamp", "timestamp"],
+        "properties": {
+          "version": { "type": "string" },
+          "stamp": { "type": "string" },
+          "timestamp": { "type": "string", "format": "date-time" },
+          "note": { "type": "string" },
+          "full_hash": { "type": "string" }
+        }
+      }
+    },
+    "inventory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "status"],
+        "properties": {
+          "id": { "type": "string" },
+          "path_or_ref": { "type": "string" },
+          "status": { "type": "string" },
+          "last_touched": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "designation_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["target", "designation", "timestamp"],
+        "properties": {
+          "target": { "type": "string" },
+          "designation": { "type": "string" },
+          "timestamp": { "type": "string", "format": "date-time" },
+          "rationale": { "type": "string" },
+          "actor": { "type": "string" }
+        }
+      }
+    },
+    "coherence_notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["timestamp", "note"],
+        "properties": {
+          "timestamp": { "type": "string", "format": "date-time" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "state_changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["timestamp", "description"],
+        "properties": {
+          "timestamp": { "type": "string", "format": "date-time" },
+          "description": { "type": "string" }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

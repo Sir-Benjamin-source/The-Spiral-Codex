@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Sir-Benjamin-source/The-Spiral-Codex/station-identification/float/float.schema.json",
+  "title": "Spiral .float — Active Working State",
+  "description": "Lightweight active working state derived from a governing .fsheet. v0.1",
+  "type": "object",
+  "required": ["format", "format_version", "governing_fsheet", "cycle_stamp", "current_designations", "active_next_moves", "mount_context"],
+  "properties": {
+    "format": { "const": "float" },
+    "format_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+$" },
+    "governing_fsheet": { "type": "string" },
+    "cycle_stamp": {
+      "type": "object",
+      "required": ["id", "timestamp"],
+      "properties": {
+        "id": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      }
+    },
+    "current_designations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["target", "designation", "since"],
+        "properties": {
+          "target": { "type": "string" },
+          "designation": { "type": "string" },
+          "since": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "active_next_moves": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["action"],
+        "properties": {
+          "action": { "type": "string" },
+          "priority": { "type": "integer" },
+          "related_designation": { "type": "string" }
+        }
+      }
+    },
+    "mount_context": {
+      "type": "object",
+      "description": "Reserved for future skill-launch metadata. Empty in v0.1.",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
