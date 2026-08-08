@@ -1,0 +1,24 @@
+{
+  "version": "0.1",
+  "description": "Living census of seed smurfs. Residual scores are updated at runtime.",
+  "smurfs": [
+    {
+      "smurf_id": "smurf-continuity-001",
+      "role": "continuity",
+      "attached_subject": "station-identification",
+      "active": true
+    },
+    {
+      "smurf_id": "smurf-generality-001",
+      "role": "generality",
+      "attached_subject": "meta-standards-G",
+      "active": true
+    },
+    {
+      "smurf_id": "smurf-station-001",
+      "role": "station",
+      "attached_subject": "floating-review-sheet",
+      "active": true
+    }
+  ]
+}
