@@ -14,7 +14,7 @@ Residual is defined so that lower values indicate better continuity with the exp
 subject + generality field. It is residual-only; no host content is processed.
 
 Authors: Sir Benjamin (vision), Grok (implementation)
-Date: 2026-08-08
+Date: 2026-08-08 / 2026-08-09 fail-closed non-finite
 """
 
 from __future__ import annotations
@@ -23,82 +23,63 @@ from dataclasses import dataclass
 from typing import Dict, Optional
 
 
-# ---------------------------------------------------------------------------
-# Soft baselines (formalized for station / auth comparison)
-# ---------------------------------------------------------------------------
-# Align volatility thresholds with mycelial_coherence DAER style
 THAT_VOLATILITY_THRESHOLD = 0.30
 WHICH_VOLATILITY_THRESHOLD = 0.40
-
-# Residual status bands — soft baselines for continuity work
-CONTINUOUS_MAX = 0.30          # residual < this → continuous
-ELEVATED_MAX = 0.55            # residual < this → elevated; else discontinuous
-
-# Soft target bands for healthy spiralworks operation
-BASELINE_STRONG = 0.12         # strong continuous target
-BASELINE_GOOD = 0.20           # good continuous target
-BASELINE_ACCEPTABLE = 0.30     # upper bound of continuous
+CONTINUOUS_MAX = 0.30
+ELEVATED_MAX = 0.55
+BASELINE_STRONG = 0.12
+BASELINE_GOOD = 0.20
+BASELINE_ACCEPTABLE = 0.30
 
 
 @dataclass(frozen=True)
 class ResidualInputs:
-    """Inputs for a residual measurement. All values expected in [0, 1]."""
-    S: float                          # Subject Isolation Strength
-    G: float                          # Generality Expansion / coherence of associations
-    C: Optional[float] = None         # Instantaneous Coherence (optional)
+    S: float
+    G: float
+    C: Optional[float] = None
 
 
 @dataclass
 class DeepResidual:
-    """Result of a deepened residual calculation."""
     residual: float
-    status: str                       # continuous | elevated | discontinuous
-    kind: str                         # that | which
+    status: str
+    kind: str
     S: float
     G: float
     C: Optional[float]
     volatility: float
-    gated: bool                       # True if volatility exceeded kind threshold
+    gated: bool
     notes: str = ""
 
 
 def classify_kind(S: float, G: float) -> str:
-    """
-    Classify the measurement as 'that' (essential / high isolation)
-    or 'which' (additive / more exploratory).
-
-    High S tends toward 'that'; lower S or lower joint S*G tends toward 'which'.
-    """
     if S >= 0.70 and (S * G) >= 0.50:
         return "that"
     return "which"
 
 
 def compute_volatility(S: float, G: float, C: Optional[float] = None) -> float:
-    """
-    Simple volatility estimate.
-    High when isolation is weak or generality is incoherent.
-    Optional C reduces volatility when coherence is high.
-    """
     base = (1.0 - S) * 0.55 + (1.0 - G) * 0.45
     if C is not None:
         base = base * (1.0 - 0.35 * C)
     return max(0.0, min(1.0, base))
 
 
-def compute_residual(inputs: ResidualInputs) -> DeepResidual:
-    """
-    Core residual function.
+def _finite_unit(x: float, default: float = 0.0) -> float:
+    """Clamp to [0, 1]; non-finite values become default (fail-closed)."""
+    try:
+        v = float(x)
+    except (TypeError, ValueError):
+        return default
+    if v != v or v == float("inf") or v == float("-inf"):
+        return default
+    return max(0.0, min(1.0, v))
 
-    residual ≈ weighted discontinuity of the (S, G[, C]) field.
-    Status bands (soft baselines):
-      continuous   residual < CONTINUOUS_MAX (0.30)
-      elevated     CONTINUOUS_MAX <= residual < ELEVATED_MAX (0.55)
-      discontinuous residual >= ELEVATED_MAX
-    """
-    S = max(0.0, min(1.0, inputs.S))
-    G = max(0.0, min(1.0, inputs.G))
-    C = None if inputs.C is None else max(0.0, min(1.0, inputs.C))
+
+def compute_residual(inputs: ResidualInputs) -> DeepResidual:
+    S = _finite_unit(inputs.S, default=0.0)
+    G = _finite_unit(inputs.G, default=0.0)
+    C = None if inputs.C is None else _finite_unit(inputs.C, default=0.0)
 
     kind = classify_kind(S, G)
     volatility = compute_volatility(S, G, C)
@@ -133,18 +114,11 @@ def compute_residual(inputs: ResidualInputs) -> DeepResidual:
     )
 
 
-def multi_config_residual(
-    configs: Dict[str, ResidualInputs],
-) -> Dict[str, DeepResidual]:
-    """
-    Run residual measurement across multiple named configurations.
-    Useful for handshake (fixed) vs mapping (variable) authentication exercises.
-    """
+def multi_config_residual(configs: Dict[str, ResidualInputs]) -> Dict[str, DeepResidual]:
     return {name: compute_residual(inp) for name, inp in configs.items()}
 
 
 def aggregate_multi_config(results: Dict[str, DeepResidual]) -> Dict:
-    """Aggregate a multi-config residual run into a compact continuity picture."""
     if not results:
         return {"count": 0, "mean_residual": None, "all_continuous": False}
 
@@ -175,10 +149,6 @@ def aggregate_multi_config(results: Dict[str, DeepResidual]) -> Dict:
 
 
 def compare_to_baselines(residual: float) -> Dict[str, object]:
-    """
-    Compare a residual (or mean residual) against formal soft baselines.
-    Returns a compact assessment usable in station reviews and auth decisions.
-    """
     if residual <= BASELINE_STRONG:
         band = "strong"
     elif residual <= BASELINE_GOOD:
