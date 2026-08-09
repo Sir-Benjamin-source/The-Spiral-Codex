@@ -14,6 +14,12 @@ from .residual import (
     BASELINE_GOOD,
     BASELINE_ACCEPTABLE,
 )
+from .validity import (
+    ValidityResult,
+    assess_validity,
+    assess_multi_config_validity,
+    residual_to_validity,
+)
 
 __all__ = [
     "SmurfBase",
@@ -33,4 +39,8 @@ __all__ = [
     "BASELINE_STRONG",
     "BASELINE_GOOD",
     "BASELINE_ACCEPTABLE",
+    "ValidityResult",
+    "assess_validity",
+    "assess_multi_config_validity",
+    "residual_to_validity",
 ]
