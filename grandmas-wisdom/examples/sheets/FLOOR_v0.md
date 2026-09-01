@@ -9,21 +9,26 @@
 
 not_supported 5 · tenable 3 · needs_qualification 2
 
-## Results
+## Three-class
 
 | Arm | acc | macro-F1 | micro-F1 |
 |-----|-----|----------|----------|
 | majority (`not_supported`) | 0.500 | 0.222 | 0.500 |
 | TF-IDF (1–2 gram) + logistic, balanced | 0.400 | 0.222 | 0.400 |
 
-Per-row: the linear model mostly collapsed to `not_supported`. It missed every `tenable` except by accident on the wrong case. Majority won because half the sheet *is* the overclaim we planted.
+## Paired accuracy (the metric the sheet was built for)
+
+A pair is correct iff the modest row is *not* `not_supported` and the overclaim row *is* `not_supported`.
+
+| Arm | pairs |
+|-----|-------|
+| majority | 0 / 5 |
+| TF-IDF + logistic | 1 / 5 (only tc5) |
+
+From the three-class LOCO predictions: tc1–tc3 both rows collapsed to `not_supported`; tc4 both went `needs_qualification`; tc5 modest → tenable, over → not_supported.
 
 ## What this informs
 
-1. A scope-pair design is the right *shape* and the wrong *balance* at n=10. Next sheet should not let overclaims be the mode, or should report paired accuracy (did it tell modest from overclaim *on the same paper*) as a first-class metric.
-2. Two-step labeling (enough-info vs not, then support vs contradict) matches both SCIVER practice and Grandma better than one softmax over three bands.
-3. This number is not complement. It is the floor discovering the sheet's own tilt.
+Three-class accuracy hid the real failure: the model almost never *separates* the two mouths of the same paper. Paired accuracy is the floor that matters for this task. Majority paired is zero — which is honest, and why we keep it.
 
-## Cousin reminder
-
-SCitance published mid-80s micro-F1 is a *different n, different evidence, different label construction*. Do not write it next to 0.40 as if they were siblings.
+Still weather. Still not complement. Call the day's testing here.
